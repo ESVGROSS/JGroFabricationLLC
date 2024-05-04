@@ -1,34 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JGro Fabrication LLC</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JGro Fabrication LLC</title>
-  <link rel="stylesheet" href="style.css" 
-</head>
-
-<body>
-  <a id="#home"></a>
-  <div class="navigation-container">
-    <div class="navigation-logo">
-      <img src="assets/images/logo.png" alt="Logo"></img>
+  <body>
+    <!--Top of page ancor-->
+    <a id="home"></a>
+    <!--Navigation bar logo-->
+    <div class="navigation-container">
+      <div class="navigation-logo">
+        <img
+          src="assets/images/logo.png"
+          alt="Logo"
+          style="height: 6rem; width: auto"
+        />
+      </div>
+      <!-- Navigation buttons -->
+      <div class="navigation-buttons" id="nav-show">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about-me">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Hamburger button for smaller screens -->
+      <div class="navigation-buttons" id="nav-hide">
+        <div class="dropdown">
+          <a
+            href="javascript:void(0)"
+            onclick="myFunction()"
+            style="color: black"
+            >&#9776;</a
+          >
+          <div class="dropdown-content">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about-me">About</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="navigation-buttons">
-      <ul style="list-style: none;">
-        <li>
-          <button id="home-button"><a href="#home">Home</a></button>
-          <button id="about-button"><a href="#about-me">About</a></button>
-          <button id="portfolio-button"><a href="#portfolio">Portfolio</a></button>
-          <button id="contact-button"><a href="#contact">Contact</a></button>
-        </li>
-      </ul>
+    <div id="header-wrapper">
+      <img src="assets/images/IMG_1317.jpg" alt="header-img">
+      <div class="layer"></div>
+      <div class="header-content">
+        <h1>JGro Fabrication LLC</h1>
+        <h2>Veteran Owned and Operated since 2021</h2>
+        <a href="#contact">Get in Touch</a>
+      </div>
     </div>
-  </div>
-  <div class="overlapple" style="background-color: purple; width: 100% ;height: 200px;"></div>
-  <div class="about-me"></div>
-  <div class="portfolio"></div>
-  <div class="contact"></div>
-</body>
+    <div id="overlapple"></div>
+    <div id="about-me"></div>
+    <div id="portfolio"></div>
+    <div id="contact"></div>
 
+    <script>
+      function myFunction() {
+        var dropdownContent = document.querySelector(".dropdown-content");
+
+        // Toggle the display of the dropdown menu
+        if (
+          dropdownContent.style.display === "none" ||
+          dropdownContent.style.display === ""
+        ) {
+          dropdownContent.style.display = "block";
+
+          // Check if dropdown will exceed the right edge of the viewport
+          if (
+            dropdownContent.getBoundingClientRect().right > window.innerWidth
+          ) {
+            dropdownContent.style.right = "0";
+            dropdownContent.style.left = "auto";
+          }
+        } else {
+          dropdownContent.style.display = "none";
+        }
+      }
+    </script>
+  </body>
 </html>
