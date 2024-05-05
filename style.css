@@ -48,6 +48,7 @@ body {
 
     .navigation-buttons#nav-hide {
         display: flex !important;
+        flex-wrap: wrap;
         align-items: center;
         /* Align items vertically */
     }
@@ -98,7 +99,7 @@ body {
     position: relative;
     width: 100%;
     /* Make the image span the width of the div */
-    height: auto;
+    height: 450px;
     /* Maintain aspect ratio */
     display: block;
     /* Ensure it behaves as a block-level element */
@@ -145,7 +146,6 @@ body {
     font-size: 1.5rem;
 }
 
-
 .header-content a {
     display: inline-block;
     /* Make it a block-level element to apply padding and border-radius */
@@ -165,4 +165,115 @@ body {
 .header-content a:hover {
     background-color: rgb(0, 101, 217);
     /* Change background color on hover */
+}
+
+/* overlapple */
+#overlapple {
+    display: flex;
+    /* Set display to flex to create a flex container */
+    flex-wrap: wrap;
+}
+
+.overlapple-columns {
+    flex: 1;
+    /* Set flex-grow, flex-shrink, and flex-basis to distribute space evenly */
+    margin: 0 10px;
+    /* Add margin between columns */
+    text-align: center;
+    /* Center align content */
+}
+
+.overlapple-columns img {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 5%;
+    /* Ensure images don't exceed the width of their container */
+}
+
+.overlapple-columns p {
+    font-weight: bold;
+}
+
+/* About Me */
+.introduction {
+    background-color: rgba(242, 239, 236, 0.684);
+    text-align: center;
+}
+
+.introduction h3 {
+    padding-top: 20px;
+}
+
+#about-me p {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#about-me a {
+    display: inline-block;
+    /* Make it a block-level element to apply padding and border-radius */
+    padding: 10px 20px;
+    /* Adjust padding as needed */
+    background-color: rgb(32, 136, 254);
+    /* Set background color */
+    color: white;
+    /* Set font color */
+    text-decoration: none;
+    /* Remove underline */
+    border-radius: 20px;
+    /* Apply rounded edges */
+    margin-top: 10px;
+}
+
+#about-me a:hover {
+    background-color: rgb(0, 101, 217);
+    /* Change background color on hover */
+}
+
+.about-me-images img {
+    height: 200px;
+    width: 200px;
+    margin: 20px 0px;
+    border-radius: 5px;
+}
+
+#about-me-image2 {
+    height: 220px;
+    width: 220px;
+}
+
+.expertise-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.carousel-container {
+    background-color: rgba(242, 239, 236, 0.684);
+    height: auto;
+    /* Adjust the height of the container as needed */
+    width: 100%;
+    /* Adjust the width of the container as needed */
+    margin: 0 auto;
+    /* Center the container horizontally */
+    border-radius: 5px;
+}
+
+#carouselExampleIndicators {
+    height: auto;
+    /* Adjust the height of the container as needed */
+    width: 45%;
+    /* Adjust the width of the container as needed */
+    margin: 0 auto;
+    /* Center the container horizontally */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.carousel-container img {
+    max-height: 100%;
+    /* Set maximum height of images to prevent distortion */
+    width: auto;
+    /* Allow images to resize proportionally */
 }
