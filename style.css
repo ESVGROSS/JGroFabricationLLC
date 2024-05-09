@@ -70,7 +70,7 @@ body {
     }
 
     .dropdown-content a {
-        color: black;
+        color: rgb(0, 0, 0);
         padding: 12px 16px;
         text-decoration: none;
         display: block;
@@ -128,17 +128,10 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     /* Center the content vertically and horizontally */
-    color: white;
+    color: rgb(255, 255, 255);
     /* Set text color */
     text-align: center;
     /* Center the text within the div */
-}
-
-.header-content h1,
-.header-content h2,
-.header-content a {
-    margin: 0;
-    /* Remove default margins */
 }
 
 .header-content h1,
@@ -154,7 +147,7 @@ body {
     font-size: 1.5rem;
 }
 
-.header-content a {
+.contact-button {
     display: inline-block;
     /* Make it a block-level element to apply padding and border-radius */
     padding: 10px 20px;
@@ -163,14 +156,14 @@ body {
     /* Set background color */
     color: white;
     /* Set font color */
-    text-decoration:none;
+    text-decoration: none;
     /* Remove underline */
     border-radius: 20px;
     /* Apply rounded edges */
     margin-top: 20px;
 }
 
-.header-content a:hover {
+.contact-button:hover {
     background-color: rgb(0, 101, 217);
     color: white;
     text-decoration: underline;
@@ -182,6 +175,7 @@ body {
     display: flex;
     /* Set display to flex to create a flex container */
     flex-wrap: wrap;
+    padding: 20px;
 }
 
 .overlapple-columns {
@@ -210,10 +204,7 @@ body {
 .introduction {
     background-color: rgba(242, 239, 236, 0.684);
     text-align: center;
-}
-
-.introduction h3 {
-    padding-top: 20px;
+    padding: 20px;
 }
 
 #about-me p {
@@ -221,33 +212,9 @@ body {
     margin-right: 5%;
 }
 
-#about-me a {
-    display: inline-block;
-    /* Make it a block-level element to apply padding and border-radius */
-    padding: 10px 20px;
-    /* Adjust padding as needed */
-    background-color: rgb(32, 136, 254);
-    /* Set background color */
-    color: white;
-    /* Set font color */
-    text-decoration: none;
-    /* Remove underline */
-    border-radius: 20px;
-    /* Apply rounded edges */
-    margin-top: 10px;
-}
-
-#about-me a:hover {
-    background-color: rgb(0, 101, 217);
-    color: white;
-    text-decoration: underline;
-    /* Change background color on hover */
-}
-
 .about-me-images img {
     height: 200px;
     width: 200px;
-    margin: 20px 0px;
     border-radius: 5px;
 }
 
@@ -258,7 +225,7 @@ body {
 
 .expertise-container {
     text-align: center;
-    margin-bottom: 20px;
+    padding: 20px;
 }
 
 .carousel-container {
@@ -269,23 +236,42 @@ body {
     /* Adjust the width of the container as needed */
     margin: 0 auto;
     /* Center the container horizontally */
+    padding: 20px;
+}
+
+.slide img {
+    max-height: 100%;
+    width: auto;
     border-radius: 5px;
 }
 
-#carouselExampleIndicators {
+
+#slick {
+    display: none;
     height: auto;
     /* Adjust the height of the container as needed */
-    width: 45%;
+    width: auto;
     /* Adjust the width of the container as needed */
     margin: 0 auto;
     /* Center the container horizontally */
-    padding: 10px;
-    border-radius: 5px;
+
 }
 
-.carousel-container img {
-    max-height: 100%;
-    /* Set maximum height of images to prevent distortion */
-    width: auto;
-    /* Allow images to resize proportionally */
+#slick.slick-initialized {
+    display: block;
+}
+
+#slick .slick-list {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+#slick .slick-slide {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#slick .slick-slide:focus {
+    outline: none;
+    cursor: grab;
 }
