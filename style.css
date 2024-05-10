@@ -6,6 +6,11 @@ body {
     margin: 0;
 }
 
+.navigation-logo img {
+    height: 6rem;
+    width: auto
+}
+
 .navigation-buttons {
     list-style: none;
     /* Remove default list styles */
@@ -20,9 +25,9 @@ body {
     /* Adjust spacing between items */
 }
 
-.navigation-buttons li a {
+.navigation-buttons a {
     text-decoration: none;
-    color: #333;
+    color: rgb(0, 0, 0);
     /* Adjust link color */
 }
 
@@ -58,6 +63,8 @@ body {
         align-items: center;
         /* Align items vertically */
     }
+
+    #hamburger{padding-right: 10px; font-size: x-large;}
 
     /* Style for the dropdown menu */
     .dropdown-content {
@@ -176,6 +183,8 @@ body {
     /* Set display to flex to create a flex container */
     flex-wrap: wrap;
     padding: 20px;
+    height: auto;
+    width: 100%;
 }
 
 .overlapple-columns {
@@ -205,6 +214,8 @@ body {
     background-color: rgba(242, 239, 236, 0.684);
     text-align: center;
     padding: 20px;
+    height: auto;
+    width: 100%;
 }
 
 #about-me p {
@@ -240,9 +251,10 @@ body {
 }
 
 .slide img {
-    max-height: 100%;
+    max-height: 400px;
     width: auto;
     border-radius: 5px;
+    padding-bottom: 20px;
 }
 
 
@@ -274,4 +286,45 @@ body {
 #slick .slick-slide:focus {
     outline: none;
     cursor: grab;
+}
+
+.contact-options {
+    text-align: center;
+    /* Center the content horizontally */
+    margin: 0 auto;
+    /* Center the container horizontally */
+    width: 100%;
+    /* Adjust max-width as needed */
+}
+
+.contact-options h2 {
+    padding-top: 20px;
+}
+
+.contact-options ul {
+    padding: 0;
+    list-style: none;
+    padding-bottom: 10px;
+}
+
+.contact-options li {
+    margin-bottom: 10px;
+}
+
+.social-options {
+    background-color: rgba(2, 0, 3, 0.7);
+    padding: 10px 0;
+    /* Adjust padding as needed */
+}
+
+.social-options a {
+    margin: 0 5px;
+    /* Adjust margin between social icons */
+}
+
+.social-options img {
+    width: 40px;
+    /* Adjust image width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
 }
