@@ -7,7 +7,7 @@ body {
 }
 
 .navigation-logo img {
-    height: 6rem;
+    height: 100px;
     width: auto
 }
 
@@ -64,7 +64,10 @@ body {
         /* Align items vertically */
     }
 
-    #hamburger{padding-right: 10px; font-size: x-large;}
+    #hamburger {
+        padding-right: 10px;
+        font-size: x-large;
+    }
 
     /* Style for the dropdown menu */
     .dropdown-content {
@@ -114,7 +117,7 @@ body {
     position: relative;
     width: 100%;
     /* Make the image span the width of the div */
-    height: 450px;
+    height: 70vh;
     /* Maintain aspect ratio */
     display: block;
     /* Ensure it behaves as a block-level element */
@@ -147,11 +150,11 @@ body {
 }
 
 .header-content h1 {
-    font-size: 4rem;
+    font-size: 10vh;
 }
 
 .header-content h2 {
-    font-size: 1.5rem;
+    font-size: 5vh;
 }
 
 .contact-button {
@@ -223,15 +226,25 @@ body {
     margin-right: 5%;
 }
 
-.about-me-images img {
+#about-me-image1,
+#about-me-image3 {
     height: 200px;
     width: 200px;
     border-radius: 5px;
 }
 
+@media screen and (max-width: 599px) {
+
+    #about-me-image1,
+    #about-me-image3 {
+        display: none !important;
+    }
+}
+
 #about-me-image2 {
     height: 220px;
     width: 220px;
+    border-radius: 5px;
 }
 
 .expertise-container {
@@ -248,6 +261,13 @@ body {
     margin: 0 auto;
     /* Center the container horizontally */
     padding: 20px;
+}
+
+.gallery-text {
+    text-align: center;
+    padding: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .slide img {
@@ -297,9 +317,15 @@ body {
     /* Adjust max-width as needed */
 }
 
-.contact-options h2 {
+.contact-options h3 {
     padding-top: 20px;
 }
+
+.contact-options p {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 
 .contact-options ul {
     padding: 0;
@@ -310,6 +336,20 @@ body {
 .contact-options li {
     margin-bottom: 10px;
 }
+
+.contact-options a {
+    color: rgba(2, 0, 3, 0.7);
+    /* Link text color */
+    text-decoration: none;
+    /* Remove underline from links */
+}
+
+.contact-options a:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(32, 136, 254);
+    text-decoration-thickness: 2px;
+}
+
 
 .social-options {
     background-color: rgba(2, 0, 3, 0.7);
