@@ -109,18 +109,16 @@ body {
 
 #header-wrapper {
     position: relative;
-    text-align: center;
+    display: flex;
+    height: 70vh;
     /* Center the content horizontally */
 }
 
 #header-wrapper img {
-    position: relative;
-    width: 100%;
-    /* Make the image span the width of the div */
-    height: 70vh;
-    /* Maintain aspect ratio */
-    display: block;
-    /* Ensure it behaves as a block-level element */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 1;
 }
 
 .layer {
@@ -137,11 +135,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* Center the content vertically and horizontally */
     color: rgb(255, 255, 255);
-    /* Set text color */
     text-align: center;
-    /* Center the text within the div */
 }
 
 .header-content h1,
