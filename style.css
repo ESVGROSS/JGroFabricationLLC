@@ -106,12 +106,14 @@ html {
     position: relative;
     display: flex;
     height: 60vh;
+    overflow: hidden; /* Prevents overflow of child elements */
+    width: 100%;
 }
 
 #header-wrapper img {
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    max-width: 100%; /* Ensures the image does not exceed the container's width */
+    height: auto; /* Maintains the aspect ratio of the image */
+    object-fit: cover; /* Ensures the image covers the container without stretching */
     flex: 1;
 }
 
