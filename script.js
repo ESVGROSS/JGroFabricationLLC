@@ -1,3 +1,4 @@
+//navbar dropdown function
 function myFunction() {
   var dropdownContent = document.querySelector(".dropdown-content");
 
@@ -18,6 +19,7 @@ function myFunction() {
   }
 }
 
+//bootstrap carousel
 var breakpoint = {
   // Small screen / phone
   sm: 576,

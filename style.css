@@ -9,6 +9,11 @@ html {
     scroll-behavior: smooth;
 }
 
+p {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 /* Navigation layout */
 .navigation-container {
     display: flex;
@@ -29,13 +34,11 @@ html {
 
 .navigation-buttons {
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 .navigation-buttons li {
     display: inline-block;
-    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .navigation-buttons a {
@@ -51,7 +54,7 @@ html {
     text-decoration-thickness: 2px;
 }
 
-/* Initially hide nav-hide container */
+
 .navigation-buttons#nav-hide {
     display: none;
 }
@@ -75,7 +78,6 @@ html {
         display: flex !important;
         flex-wrap: wrap;
         align-items: center;
-        /* Align items vertically */
     }
 
     .dropdown-content {
@@ -108,17 +110,13 @@ html {
     display: flex;
     height: 60vh;
     overflow: hidden;
-    /* Prevents overflow of child elements */
     width: 100%;
 }
 
 #header-wrapper img {
     max-width: 100%;
-    /* Ensures the image does not exceed the container's width */
     height: auto;
-    /* Maintains the aspect ratio of the image */
     object-fit: cover;
-    /* Ensures the image covers the container without stretching */
     flex: 1;
 }
 
@@ -155,17 +153,11 @@ html {
 
 .contact-button {
     display: inline-block;
-    /* Make it a block-level element to apply padding and border-radius */
     padding: 10px 20px;
-    /* Adjust padding as needed */
     background-color: rgb(32, 136, 254);
-    /* Set background color */
     color: white;
-    /* Set font color */
     text-decoration: none;
-    /* Remove underline */
     border-radius: 20px;
-    /* Apply rounded edges */
     margin-top: 20px;
 }
 
@@ -173,13 +165,11 @@ html {
     background-color: rgb(0, 101, 217);
     color: white;
     text-decoration: underline;
-    /* Change background color on hover */
 }
 
 /* overlapple */
 #overlapple {
     display: flex;
-    /* Set display to flex to create a flex container */
     flex-wrap: wrap;
     padding: 20px;
     height: auto;
@@ -189,19 +179,16 @@ html {
 
 .overlapple-columns {
     flex: 1;
-    /* Set flex-grow, flex-shrink, and flex-basis to distribute space evenly */
     margin: 0 10px;
-    /* Add margin between columns */
     text-align: center;
-    /* Center align content */
 }
 
 .overlapple-columns img {
+    position: relative;
     height: 200px;
     width: 200px;
     margin: 10px;
     border-radius: 5%;
-    /* Ensure images don't exceed the width of their container */
 }
 
 .overlapple-columns p {
@@ -215,11 +202,6 @@ html {
     padding: 20px;
     height: auto;
     width: 100%;
-}
-
-#about-me p {
-    margin-left: 5%;
-    margin-right: 5%;
 }
 
 #about-me-image1,
@@ -249,39 +231,36 @@ html {
     background-color: rgba(242, 239, 236, 0.42);
 }
 
+/* bootstrap carousel */
 .carousel-container {
     background-color: rgba(242, 239, 236, 0.684);
     height: auto;
-    /* Adjust the height of the container as needed */
     width: 100%;
-    /* Adjust the width of the container as needed */
     margin: 0 auto;
-    /* Center the container horizontally */
     padding: 20px;
 }
 
 .gallery-text {
     text-align: center;
-    padding: 20px;
-    margin-left: 5%;
-    margin-right: 5%;
 }
 
 .slide img {
     max-height: 400px;
     width: auto;
     border-radius: 5px;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
+}
+
+.slide img.expanded {
+    max-height: 800px;
+    width: 600px;
 }
 
 #slick {
     display: none;
     height: auto;
-    /* Adjust the height of the container as needed */
     width: auto;
-    /* Adjust the width of the container as needed */
     margin: 0 auto;
-    /* Center the container horizontally */
 }
 
 #slick.slick-initialized {
@@ -305,23 +284,14 @@ html {
 
 .contact-options {
     text-align: center;
-    /* Center the content horizontally */
     margin: 0 auto;
-    /* Center the container horizontally */
     width: 100%;
-    /* Adjust max-width as needed */
     background-color: rgba(242, 239, 236, 0.42);
 }
 
 .contact-options h3 {
     padding-top: 20px;
 }
-
-.contact-options p {
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
 
 .contact-options ul {
     padding: 0;
@@ -335,9 +305,7 @@ html {
 
 .contact-options a {
     color: rgba(2, 0, 3, 0.7);
-    /* Link text color */
     text-decoration: none;
-    /* Remove underline from links */
 }
 
 .contact-options a:hover {
@@ -346,23 +314,19 @@ html {
     text-decoration-thickness: 2px;
 }
 
-
+/* social media buttons */
 .social-options {
     background-color: rgba(2, 0, 3, 0.7);
-    padding: 10px 0;
-    /* Adjust padding as needed */
+    padding: 10px 0;/
 }
 
 .social-options a {
     margin: 0 5px;
-    /* Adjust margin between social icons */
 }
 
 .social-options img {
     width: 40px;
-    /* Adjust image width as needed */
     height: auto;
-    /* Maintain aspect ratio */
 }
 
 .social-options p {
