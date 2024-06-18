@@ -1,4 +1,3 @@
-/*basics*/
 /*#region*/
 * {
     margin: 0;
@@ -8,52 +7,52 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: #212A31;
-    /* Removed overflow: hidden; */
+    overflow-y: auto;
     overflow-x: hidden;
-    /* Optional, only if you want to prevent horizontal scrolling */
-    margin: 0;
-    font-family: "Raleway", sans-serif;
+    height: 100%;
+    width: 100vw;
 }
 
-a {
+a,
+button {
     cursor: pointer;
+    text-decoration: none;
 }
 
 html {
-    font-size: clamp(14px, 1.5vw, 18px);
-    /* Fluid typography for base font size */
+    font-size: clamp(15px, 3vw, 20px);
+}
+
+h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: bold;
 }
 
 h2 {
-    font-size: clamp(1.5rem, 2vw, 1.75rem);
-    /* Scales between 2rem and 3rem */
+    font-size: clamp(2rem, 1vw, 3rem);
 }
 
 h3 {
-    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
-    /* Scales between 1.5rem and 2rem */
+    font-size: clamp(1.5rem, 1.5vw, 2rem);
+    padding-bottom: 5px;
 }
 
 p,
 a {
-    font-size: clamp(1rem, .75vw, 1.2rem);
-    /* Scales between 1rem and 1.2rem */
+    font-size: clamp(.9rem, 1vw, 1.5rem);
 }
 
-.container {
-    width: 100vw;
+main {
+    background-color: #D3D9D4;
 }
 
-/*#endregion*/
-
-/*sidebar*/
-/*#region*/
-.sidebar {
-    background: #212A31;
+header {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -62,7 +61,7 @@ a {
     padding-right: 25px;
 }
 
-.sidebar .logo {
+.logo {
     max-width: 150px;
 }
 
@@ -99,6 +98,44 @@ a {
     text-decoration: underline;
 }
 
+.dropdown-content {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 80%;
+    right: -10%;
+    z-index: 10;
+}
+
+.dropdown-content ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #124E66;
+    border-radius: 10px;
+}
+
+.dropdown-content ul li a {
+    color: white;
+    text-decoration: none;
+    text-align: right;
+    padding: 8px;
+    padding-right: 20px;
+    display: block;
+    white-space: nowrap;
+}
+
+.dropdown-content ul li a:hover {
+    color: #95A9AD;
+    text-decoration: underline;
+}
+
 .social-icons {
     display: flex;
     justify-content: flex-start;
@@ -116,14 +153,32 @@ a {
     height: auto;
 }
 
-/*#endregion*/
-
-main {
-    background-color: #D3D9D4;
+footer {
+    grid-area: footer;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    font-size: small;
 }
 
-/*service page*/
+#social-foot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#social-foot img {
+    width: 30px;
+    height: auto;
+}
+
+/*#endregion*/
+
+/*Services*/
 /*#region*/
+
 #overlapple {
     display: flex;
     flex-wrap: wrap;
@@ -150,7 +205,26 @@ main {
     font-weight: bold;
 }
 
-/*carousel*/
+.services {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5%;
+    padding: 50px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+p {
+    margin-bottom: 5px;
+}
+
 /*#region*/
 .document-center {
     width: 100%;
@@ -158,13 +232,17 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
+    padding: 5% 10% 0 10%;
+}
+
+.carousel-container {
+    max-width: 980px;
+    width: 100%;
 }
 
 .carousel {
     position: relative;
-    width: 250px;
-    height: 225px;
+    width: 100%;
     border-radius: 5%;
     /*Width of image is 980px. Height is 570px.*/
     padding-top: calc(570 / 980 * 100%);
@@ -173,7 +251,7 @@ main {
 
 .carousel-container img {
     position: absolute;
-    top: 0;
+    top: 20;
     left: 0;
     width: 100%;
     height: 100%;
@@ -329,123 +407,84 @@ main {
 }
 
 /*#endregion*/
-
-/* Flexbox styling for services sections */
-.services {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    padding: 50px;
-}
-
-h2 {
-    margin-bottom: 10px;
-}
-
-h3 {
-    margin-top: 10px;
-}
-
-p {
-    margin-bottom: 5px;
-}
-
 /*#endregion*/
 
-/* Container for the gallery and the more span */
-#gallery {
+/*Gallery*/
+/*#region*/
+
+.gallery-text {
+    text-align: center;
+    padding-top: 20px;
+    margin: 0 40px;
+}
+
+.gallery-container {
     display: flex;
     flex-wrap: wrap;
-    /* Allows wrapping to the next row */
     justify-content: center;
-    /* Center aligns the items horizontally */
     gap: 20px;
-    /* Adds gap between the images */
     padding: 20px;
-    /* Optional padding around the gallery */
-}
-
-#gallery #more {
-    display: flex;
-    /* Use flexbox for the additional images */
-    flex-wrap: wrap;
-    /* Allows wrapping to the next row */
-    justify-content: center;
-    /* Center aligns the items horizontally */
-    gap: 20px;
-    /* Adds gap between the images */
-    margin-top: 20px;
-    /* Adds space between the initial and additional images */
-}
-
-/* Individual gallery images */
-#gallery img,
-#gallery #more img {
-    flex: 1 1 calc(25% - 40px);
-    /* Makes each image take 25% of the row minus the gap */
-    max-width: calc(25% - 40px);
-    /* Ensures the images do not exceed their calculated width */
-    margin: 10px;
-    /* Optional: Adds some margin around each image */
-    object-fit: cover;
-    /* Ensures the images fit nicely */
-    border-radius: 8px;
-    /* Optional: Rounds the corners of the images */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Optional: Adds a subtle shadow */
+    margin: 0 auto;
+    text-align: center;
 }
 
 #dots {
-    color: #D3D9D4;
+    display: block;
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+#gallery img,
+#more img {
+    flex: 1 1 calc(25% - 40px);
+    max-width: calc(25% - 40px);
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Lightbox overlay */
-/*#region*/
-.lightbox {
+#lightbox {
     display: none;
     /* Hidden by default */
     position: fixed;
-    /* Stay in place */
     z-index: 1000;
-    /* Sit on top */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, 0.8);
-    /* Black w/ opacity */
+    /* Semi-transparent background */
     justify-content: center;
-    /* Center horizontally */
     align-items: center;
-    /* Center vertically */
+    overflow: auto;
     flex-direction: column;
-    /* Stack elements vertically */
 }
 
-/* Lightbox content */
+/* Expanded image */
 .lightbox-content {
     max-width: 90%;
-    max-height: 80%;
-    margin: auto;
-    display: block;
+    max-height: 90%;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: 0.3s;
 }
 
-/* Caption for lightbox image */
+/* Caption text */
 #caption {
-    margin: 20px auto;
-    text-align: center;
+    margin-top: 15px;
     color: #ccc;
-    font-size: 18px;
-    padding: 10px 20px;
+    font-size: 1.2em;
+    text-align: center;
 }
 
-/* Close button for lightbox */
 .close {
     position: absolute;
     top: 15px;
@@ -465,389 +504,84 @@ p {
 
 /*#endregion*/
 
-.content-container {
-    display: flex;
-    flex-wrap: wrap;
-    /* Allows items to wrap if they exceed the container width */
-    justify-content: space-between;
-    /* Space items evenly */
-    gap: 50px;
-    /* Adds space between items */
-    margin: 20px 0;
-    /* Adds some vertical margin */
-    padding: 50px;
-}
-
-/* 'intouch' section styles */
-#intouch {
-    flex: 1 1 45%;
-    /* Flexible: grows, shrinks, and starts at 45% of the container width */
-    min-width: 300px;
-    /* Ensures a minimum width for small screens */
-    box-sizing: border-box;
-    /* Includes padding and border in width */
-}
-
-/* Styles for the 'intouch' section */
-#intouch ul {
-    list-style-type: none;
-    /* Removes default list bullets */
-    padding: 0;
-    /* Removes default padding */
-}
-
-#intouch ul li {
-    margin-bottom: 15px;
-    /* Adds space between list items */
-}
-
-#intouch ul li a {
-    text-decoration: none;
-    /* Removes text decoration from links */
-    color: inherit;
-    /* Ensures link inherits the parent element's color */
-    display: inline-block;
-    /* Allows padding around the link */
-    padding: 5px 0;
-    /* Adds padding to the link */
-}
-
-#intouch ul li img {
-    vertical-align: middle;
-    /* Aligns icons with text */
-    margin-right: 10px;
-    /* Adds space between icon and text */
-}
-
-
-/* 'wrapper' section styles */
-.wrapper {
-    flex: 1 1 45%;
-    /* Flexible: grows, shrinks, and starts at 45% of the container width */
-    min-width: 300px;
-    /* Ensures a minimum width for small screens */
-    box-sizing: border-box;
-    /* Includes padding and border in width */
-}
-
-:root {
-    --yellow: #FFBD13;
-    --blue: #4383FF;
-    --blue-d-1: #3278FF;
-    --light: #F5F5F5;
-    --grey: #AAA;
-    --white: #FFF;
-    --shadow: 8px 8px 30px rgba(0, 0, 0, .05);
-}
-
-.wrapper {
-    background: var(--white);
-    padding: 2rem;
-    max-width: 576px;
-    width: 100%;
-    border-radius: .75rem;
-    box-shadow: var(--shadow);
-    text-align: center;
-}
-
-.wrapper h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-.rating {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-gap: .5rem;
-    font-size: 2rem;
-    color: var(--yellow);
-    margin-bottom: 2rem;
-}
-
-.rating .star {
-    cursor: pointer;
-}
-
-.rating .star.active {
-    opacity: 0;
-    animation: animate .5s calc(var(--i) * .1s) ease-in-out forwards;
-}
-
-@keyframes animate {
-    0% {
-        opacity: 0;
-        transform: scale(1);
-    }
-
-    50% {
-        opacity: 1;
-        transform: scale(1.2);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-
-.rating .star:hover {
-    transform: scale(1.1);
-}
-
-textarea {
-    width: 100%;
-    background: var(--light);
-    padding: 1rem;
-    border-radius: .5rem;
-    border: none;
-    outline: none;
-    resize: none;
-    margin-bottom: .5rem;
-}
-
-.btn-group {
-    display: flex;
-    grid-gap: .5rem;
-    align-items: center;
-}
-
-.btn-group .btn {
-    padding: .75rem 1rem;
-    border-radius: .5rem;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: .875rem;
-    font-weight: 500;
-}
-
-.btn-group .btn.submit {
-    background: var(--blue);
-    color: var(--white);
-}
-
-.btn-group .btn.submit:hover {
-    background: var(--blue-d-1);
-}
-
-.btn-group .btn.cancel {
-    background: var(--white);
-    color: var(--blue);
-}
-
-.btn-group .btn.cancel:hover {
-    background: var(--light);
-}
-
-.star {
-    --i: 0;
-}
-
-/*footer*/
-/*#region*/
-footer {
-    grid-area: footer;
-    /* Assign the footer to the footer grid area */
-    background-color: #212A31;
-    color: white;
-    text-align: center;
-    /* Center the text */
-    padding: 10px;
-    /* Add padding for better spacing */
-    width: 100%;
-    /* Ensure the footer spans the full width */
-    font-size: small;
-}
-
-#social-foot {
-    display: flex;
-    /* Use flexbox for layout */
-    justify-content: center;
-    /* Center the icons horizontally */
-    align-items: center;
-    /* Center the icons vertically if necessary */
-    gap: 10px;
-    /* Add some space between the icons */
-}
-
-#social-foot img {
-    width: 30px;
-    /* Adjust the size of the icons */
-    height: auto;
-    /* Maintain aspect ratio */
-}
-
-/*#endregion*/
-
 /* Large screens (above 1300px) */
-@media (min-width: 1300px) {
+@media (min-width: 1201px) {
 
     .document-center,
     #nav-mobile,
-    #social-foot {
+    #social-foot,
+    #video-float-alot,
+    #video-float-alittle {
         display: none;
     }
 
 }
 
-/* Tablet screens (601px - 1299px) */
-@media (min-width: 601px) and (max-width: 1299px) {
+
+@media (min-width: 900px) and (max-width: 1200px) {
 
     .document-center,
+    .social-icons,
+    #nav-mobile,
+    #video-nofloat,
+    #video-float-alittle {
+        display: none;
+    }
+
+    #video-float-alot {
+        float: right;
+    }
+
+    #gallery img,
+    #more img {
+        flex: 1 1 calc(50% - 40px);
+        max-width: calc(30% - 40px);
+    }
+}
+
+@media (min-width: 601px) and (max-width: 899px) {
+
+    #overlapple,
     #nav-tablet,
+    .social-icons,
+    #video-nofloat,
+    #video-float-alot {
+        display: none;
+    }
+
+    #video-float-alittle {
+        float: right;
+    }
+
+    #gallery img,
+    #more img {
+        flex: 1 1 calc(75% - 40px);
+        max-width: calc(40% - 40px);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    #overlapple,
+    #nav-tablet,
+    #video-float-alot,
+    #video-float-alittle,
     .social-icons {
         display: none;
     }
 
-    #nav-mobile {
-        position: relative;
-    }
-
-    .dropdown-content {
-        display: none;
-        /* Ensure it starts as hidden */
-        flex-direction: column;
-        /* Arrange items in a column */
-        align-items: flex-start;
-        padding: 10px;
-        border-radius: 10px;
-        position: absolute;
-        /* Position it absolutely if needed */
-        top: 100%;
-        /* Position it below the dropdown menu */
-        right: -20%;
-        z-index: 10;
-
-    }
-
-    .dropdown-content ul {
-        list-style: none;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        background-color: #124E66;
-        border-radius: 10px;
-    }
-
-    .dropdown-content ul li a {
-        color: white;
-        text-decoration: none;
-        text-align: right;
-        padding: 8px;
-        padding-right: 20px;
-        display: block;
-        white-space: nowrap;
-        /* Prevent wrapping */
-    }
-
-    .dropdown-content ul li a:hover {
-        color: #95A9AD;
-        text-decoration: underline;
-    }
-
-}
-
-@media(max-width: 900px) {
     .services {
-        flex-direction: column;
-    }
-
-    #ServicesVideo {
-        margin-top: 20px;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 5%;
+        padding: 50px;
     }
 
     #gallery img,
-#gallery #more img {
-    flex: 1 1 calc(50% - 40px);
-    /* Makes each image take 25% of the row minus the gap */
-    max-width: calc(50% - 40px);
-    /* Ensures the images do not exceed their calculated width */
-    margin: 10px;
-    /* Optional: Adds some margin around each image */
-    object-fit: cover;
-    /* Ensures the images fit nicely */
-    border-radius: 8px;
-    /* Optional: Rounds the corners of the images */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Optional: Adds a subtle shadow */
-}
-
-/* Mobile screens (up to 600px) */
-@media (max-width: 600px) {
-
-    #nav-tablet,
-    .social-icons,
-    #overlapple {
-        display: none;
-    }
-
-    #nav-mobile {
-        position: relative;
-    }
-
-    .dropdown-content {
-        display: none;
-        /* Ensure it starts as hidden */
-        flex-direction: column;
-        /* Arrange items in a column */
-        align-items: flex-start;
-        padding: 10px;
-        border-radius: 10px;
-        position: absolute;
-        /* Position it absolutely if needed */
-        top: 100%;
-        /* Position it below the dropdown menu */
-        right: -20%;
-        z-index: 10;
-
-    }
-
-    .dropdown-content ul {
-        list-style: none;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        background-color: #124E66;
-        border-radius: 10px;
-    }
-
-    .dropdown-content ul li a {
-        color: white;
-        text-decoration: none;
-        text-align: right;
-        padding: 8px;
-        padding-right: 20px;
-        display: block;
-        white-space: nowrap;
-        /* Prevent wrapping */
-    }
-
-    .dropdown-content ul li a:hover {
-        color: #95A9AD;
-        text-decoration: underline;
-    }
-
-    #gallery img,
-    #gallery #more img {
+    #more img {
         flex: 1 1 calc(100% - 40px);
-        /* Makes each image take 25% of the row minus the gap */
-        max-width: calc(100% - 40px);
-        /* Ensures the images do not exceed their calculated width */
-        margin: 10px;
-        /* Optional: Adds some margin around each image */
-        object-fit: cover;
-        /* Ensures the images fit nicely */
-        border-radius: 8px;
-        /* Optional: Rounds the corners of the images */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        /* Optional: Adds a subtle shadow */
+        max-width: calc(70% - 40px);
     }
-
-}}
+}

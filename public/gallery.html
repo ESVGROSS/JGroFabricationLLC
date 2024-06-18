@@ -14,47 +14,50 @@
 </head>
 
 <body>
-    <!-- Full Size Screen -->
-    <div class="container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <img src="/JGroFabricationLLC-Option2/assets/images/JGroLogoWhiteText.png" alt="Logo" class="logo">
-            <div class="nav" id="nav-mobile">
-                <a id="dropdown-menu" onclick="myFunction()">Menu</a>
-                <div class="dropdown-content" id="dropdown-content">
-                    <ul>
-                        <li><a href="/JGroFabricationLLC-Option2/index.html" onclick="closeDropdown()">Home</a></li>
-                        <li><a href="/JGroFabricationLLC-Option2/public/services.html"
-                                onclick="closeDropdown()">Services</a></li>
-                        <li><a href="/JGroFabricationLLC-Option2/public/gallery.html"
-                                onclick="closeDropdown()">Gallery</a></li>
-                        <li><a href="/JGroFabricationLLC-Option2/public/about.html" onclick="closeDropdown()">About
-                                Us</a></li>
-                        <li><a href="/JGroFabricationLLC-Option2/public/contact.html" onclick="closeDropdown()">Get In
-                                Touch</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="nav" id="nav-tablet">
+    <header>
+        <img src="/JGroFabricationLLC-Option2/assets/images/JGroLogoWhiteText.png" alt="Logo" class="logo">
+        <div class="nav" id="nav-mobile">
+            <a id="dropdown-menu" onclick="myFunction()">Menu</a>
+            <div class="dropdown-content" id="dropdown-content">
                 <ul>
-                    <li><a href="/JGroFabricationLLC-Option2/index.html">Home</a></li>
-                    <li><a href="/JGroFabricationLLC-Option2/public/services.html">Services</a></li>
-                    <li><a href="/JGroFabricationLLC-Option2/public/gallery.html">Gallery</a></li>
-                    <li><a href="/JGroFabricationLLC-Option2/public/about.html">About Us</a></li>
-                    <li><a href="/JGroFabricationLLC-Option2/public/contact.html">Get In Touch</a></li>
+                    <li><a href="/JGroFabricationLLC-Option2/index.html" onclick="closeDropdown()">Home</a></li>
+                    <li><a href="/JGroFabricationLLC-Option2/public/services.html"
+                            onclick="closeDropdown()">Services</a></li>
+                    <li><a href="/JGroFabricationLLC-Option2/public/gallery.html" onclick="closeDropdown()">Gallery</a>
+                    </li>
+                    <li><a href="/JGroFabricationLLC-Option2/public/about.html" onclick="closeDropdown()">About Us</a>
+                    </li>
+                    <li><a href="/JGroFabricationLLC-Option2/public/contact.html" onclick="closeDropdown()">Get In
+                            Touch</a></li>
                 </ul>
             </div>
-            <div class="social-icons">
-                <a href="https://m.facebook.com/people/JGro-Fabrication-LLC/61557983825334/">
-                    <img src="/JGroFabricationLLC-Option2/assets/images/Facebook_Logo_Primary.png" alt="Facebook Logo">
-                </a>
-                <a href="https://www.instagram.com/j.grofabrication?igsh=a2V5eTdqaThkdHNn">
-                    <img src="/JGroFabricationLLC-Option2/assets/images/Instagram_Glyph_Gradient.png"
-                        alt="Instagram Logo">
-                </a>
-            </div>
         </div>
-        <main>
+        <div class="nav" id="nav-tablet">
+            <ul>
+                <li><a href="/JGroFabricationLLC-Option2/index.html">Home</a></li>
+                <li><a href="/JGroFabricationLLC-Option2/public/services.html">Services</a></li>
+                <li><a href="/JGroFabricationLLC-Option2/public/gallery.html">Gallery</a></li>
+                <li><a href="/JGroFabricationLLC-Option2/public/about.html">About Us</a></li>
+                <li><a href="/JGroFabricationLLC-Option2/public/contact.html">Get In Touch</a></li>
+            </ul>
+        </div>
+        <div class="social-icons">
+            <a href="https://m.facebook.com/people/JGro-Fabrication-LLC/61557983825334/">
+                <img src="/JGroFabricationLLC-Option2/assets/images/Facebook_Logo_Primary.png" alt="Facebook Logo">
+            </a>
+            <a href="https://www.instagram.com/j.grofabrication?igsh=a2V5eTdqaThkdHNn">
+                <img src="/JGroFabricationLLC-Option2/assets/images/Instagram_Glyph_Gradient.png" alt="Instagram Logo">
+            </a>
+        </div>
+    </header>
+    <main>
+        <section class="gallery-text">
+            <h2>Our Work in Images</h2>
+            <p>Our gallery showcases a diverse range of projects. From residential to industrial, each image represents
+                our commitment to precision and quality craftsmanship. Browse through our portfolio to discover how we
+                transform ideas from concept to creation.</p>
+        </section>
+        <section class="gallery-container">
             <!-- Lightbox overlay -->
             <div id="lightbox" class="lightbox">
                 <span class="close" onclick="closeLightbox()">&times;</span>
@@ -62,42 +65,64 @@
                     src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Expanded Image">
                 <div id="caption"></div>
             </div>
+
+            <!-- Gallery images -->
             <div id="gallery">
-                <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (1).jpg" alt="Stainless steel flanges with weldment">
-                <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (2).jpg" alt="Sanitary tube with weldment">
-                <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (3).jpg" alt="Magnaflow exhaust custom fabricated">
-                <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (4).jpg" alt="Aluminum post weldment with mounting flange">
-                <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (5).jpg" alt="Custom ordered office table">
-                <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (6).jpg" alt="Custom ordered office table">
-                <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (7).jpg" alt="Custom ordered aluminum motorcycle stands">
-                <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (8).jpg" alt="Stainless steel pipe fabrication">
-                <span id="dots">.</span><span id="more">
-                    <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (9).jpg" alt="Sanitary tube with weldment">
-                    <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (10).jpg" alt="Roller assembily weldment">
-                    <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (11).jpg" alt="Plating weldment build up">
-                    <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (12).jpg" alt="Flange to pipe inner weldment">
-                    <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (13).jpg" alt="Brewery process pipe construction and installation">
-                    <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (14).jpg" alt="Aluminum pipe end cap weldment">
-                    <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (15).jpg" alt="Spray bar gusset to mounting allthread weldments">
-                    <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (16).jpg" alt="Sanitary tube assembly weldments">
-                    <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (17).jpg" alt="Stainless steel pipe weldment">
-                </span>
-                <button class="nav" onclick="seeMore()" id="myBtn" type="button">See More</button>
+                <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (1).jpg"
+                    alt="Stainless steel flanges with weldment" onclick="expandImage(this)">
+                <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (2).jpg"
+                    alt="Sanitary tube with weldment" onclick="expandImage(this)">
+                <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (3).jpg"
+                    alt="Magnaflow exhaust custom fabricated" onclick="expandImage(this)">
+                <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (4).jpg"
+                    alt="Aluminum post weldment with mounting flange" onclick="expandImage(this)">
+                <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (5).jpg"
+                    alt="Custom ordered office table" onclick="expandImage(this)">
+                <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (6).jpg"
+                    alt="Custom ordered office table" onclick="expandImage(this)">
+                <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (7).jpg"
+                    alt="Custom ordered aluminum motorcycle stands" onclick="expandImage(this)">
+                <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (8).jpg"
+                    alt="Stainless steel pipe fabrication" onclick="expandImage(this)">
+                <!-- Additional images -->
+                <span id="dots">.</span>
+                <div id="more">
+                    <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (9).jpg"
+                        alt="Sanitary tube with weldment" onclick="expandImage(this)">
+                    <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (10).jpg"
+                        alt="Roller assembly weldment" onclick="expandImage(this)">
+                    <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (11).jpg"
+                        alt="Plating weldment build up" onclick="expandImage(this)">
+                    <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (12).jpg"
+                        alt="Flange to pipe inner weldment" onclick="expandImage(this)">
+                    <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (13).jpg"
+                        alt="Brewery process pipe construction and installation" onclick="expandImage(this)">
+                    <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (14).jpg"
+                        alt="Aluminum pipe end cap weldment" onclick="expandImage(this)">
+                    <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (15).jpg"
+                        alt="Spray bar gusset to mounting all-thread weldments" onclick="expandImage(this)">
+                    <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (16).jpg"
+                        alt="Sanitary tube assembly weldments" onclick="expandImage(this)">
+                    <img src="/JGroFabricationLLC-Option2/assets/images/gallery/gallery (17).jpg"
+                        alt="Stainless steel pipe weldment" onclick="expandImage(this)">
+                </div>
+                <div class="button-container">
+                    <button class="nav" onclick="seeMore()" id="myBtn" type="button">See More</button>
+                </div>
             </div>
-        </main>
-        <footer>
-            <p>JGro Fabrication LLC | All Rights Reserved &copy; 2024</p>
-            <div class="social-icons" id="social-foot">
-                <a href="https://m.facebook.com/people/JGro-Fabrication-LLC/61557983825334/">
-                    <img src="/JGroFabricationLLC-Option2/assets/images/Facebook_Logo_Primary.png" alt="Facebook Logo">
-                </a>
-                <a href="https://www.instagram.com/j.grofabrication?igsh=a2V5eTdqaThkdHNn">
-                    <img src="/JGroFabricationLLC-Option2/assets/images/Instagram_Glyph_Gradient.png"
-                        alt="Instagram Logo">
-                </a>
-            </div>
-        </footer>
-    </div>
+        </section>
+    </main>
+    <footer>
+        <p>JGro Fabrication LLC | All Rights Reserved &copy; 2024</p>
+        <div class="social-icons" id="social-foot">
+            <a href="https://m.facebook.com/people/JGro-Fabrication-LLC/61557983825334/">
+                <img src="/JGroFabricationLLC-Option2/assets/images/Facebook_Logo_Primary.png" alt="Facebook Logo">
+            </a>
+            <a href="https://www.instagram.com/j.grofabrication?igsh=a2V5eTdqaThkdHNn">
+                <img src="/JGroFabricationLLC-Option2/assets/images/Instagram_Glyph_Gradient.png" alt="Instagram Logo">
+            </a>
+        </div>
+    </footer>
     <script src="/JGroFabricationLLC-Option2/js/script.js"></script>
 </body>
 

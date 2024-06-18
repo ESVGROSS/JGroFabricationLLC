@@ -6,63 +6,61 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    color: white;
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: #212A31;
-    /* Removed overflow: hidden; */
-    overflow-x: hidden; /* Optional, only if you want to prevent horizontal scrolling */
-    margin: 0;
-    padding: 0;
-    font-family: "Raleway", sans-serif;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100vw;
 }
 
-a{cursor: pointer;}
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
 
 html {
-    font-size: clamp(14px, 1.5vw, 18px); /* Fluid typography for base font size */
+    font-size: clamp(15px, 3vw, 20px);
 }
 
 h1 {
-    font-size: clamp(.1.5rem, 4vw, 4rem); /* Scales between 2.5rem and 4rem */
+    font-size: clamp(3rem, 6vw, 5rem);
     font-weight: bold;
 }
 
 h2 {
-    font-size: clamp(1.5rem, 2vw, 1.75rem); /* Scales between 2rem and 3rem */
+    font-size: clamp(2rem, 1vw, 3rem);
 }
 
 h3 {
-    font-size: clamp(1.25rem, 1.5vw, 1.5rem); /* Scales between 1.5rem and 2rem */
+    font-size: clamp(1.5rem, 1.5vw, 2rem);
+    padding-bottom: 5px;
 }
 
-p, a {
-    font-size: clamp(1rem, .75vw, 1.2rem); /* Scales between 1rem and 1.2rem */
+p,
+a {
+    font-size: clamp(.9rem, 1vw, 1.5rem);
 }
 
 .container {
     display: grid;
-    /* Removed height: 100vh; */
-    width: 100vw;
-    grid-template-columns: 0.4fr 1fr 1fr;
-    grid-template-rows: auto auto; /* Use auto to allow rows to expand based on content */
-    grid-template-areas: 
-    "sidebar main-left main-right" 
-    "footer footer footer";
-    gap: 0px; /* No gap between grid items */
-    overflow: auto; /* Allow scrolling if content overflows */
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-areas:
+        "aside main";
 }
 
-.sidebar {
-    background: #212A31;
-    grid-area: sidebar;
+aside {
+    grid-area: aside;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
     padding-top: 0%;
     text-align: left;
-    color: white;
 }
 
 .logo {
@@ -72,21 +70,8 @@ p, a {
     margin-bottom: auto;
 }
 
-.bottom-content {
-    margin-top: auto;
-}
-
-h2,
-p {
-    margin: 0;
-    padding: 5px 0;
-}
-
 .social-icons {
-    display: flex;
-    justify-content: flex-start;
     padding-top: 10px;
-    padding-bottom: 10px;
     gap: 10px;
 }
 
@@ -99,27 +84,23 @@ p {
     height: auto;
 }
 
-.main {
-    grid-column: span 2;
-    /* Ensure main spans across both columns assigned */
+main {
+    grid-area: main;
     position: relative;
-    background-image: url(/JGroFabricationLLC-Option2/assets/images/IMG_1317.jpg);
+    background-image: url(/JGroFabricationLLC-Option2/assets/images/Hero.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border: 20px solid #212A31;
     border-radius: 70px;
-    padding: 20px;
+    padding: 40px;
     box-sizing: border-box;
-    height: 100vh;
-    color: white;
+    grid-column: span 2;
     display: flex;
-    /* Make main a flex container */
-    justify-content: space-between;
-    /* Distribute space between main-left and main-right */
+    z-index: 1;
 }
 
-.main .overlay {
+main .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -127,52 +108,62 @@ p {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 50px;
-    z-index: 1;
+    z-index: 2;
     pointer-events: none;
 }
 
-.main>*:not(.overlay) {
-    position: relative;
+main>*:not(.overlay) {
     z-index: 2;
 }
 
-.main-left {
-    grid-area: main-left;
+#main-left {
+    width: 55vw
+}
+
+#main-right {
+    width: 45vw;
+}
+
+#main-left,
+#main-right {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-left: 20px;
-    min-width: 0;
-    /* Prevent overflow and enable proper shrinking */
 }
+
+#nav-desktop,
+h1,
+h2,
+#bottom-image-link,
+#highlight-links {
+    align-self: flex-start;
+}
+
+#bottom-image-link,
+#highlight-links {
+    margin-top: auto;
+}
+
+#contact-us-link {
+    align-self: flex-end;
+}
+
+#bottom-image-link{padding-top: 30px;}
 
 .nav {
     background-color: #124E66;
     border-radius: 50px;
     height: fit-content;
     padding: 20px;
-    display: flex;
-    justify-content: space-between;
+    display: inline-block;
     align-items: center;
     color: white;
+    box-sizing: border-box;
 }
 
 .nav ul {
     list-style: none;
     display: flex;
-    padding: 0;
-    margin: 0;
     gap: 50px;
-}
-
-.nav li {
-    margin: 0;
-}
-
-.nav a {
-    color: white;
-    text-decoration: none;
 }
 
 .nav a:hover {
@@ -180,72 +171,18 @@ p {
     text-decoration: underline;
 }
 
-.text-content {
-    text-align: left;
-    margin-bottom: auto;
-    padding-left: 20px;
-}
-
-.text-content h1 {
-    color: white;
-    margin: 10px 0;
-    font-size: 5rem;
-    font-weight: bold;
-}
-
-.text-content h2 {
-    color: white;
-    margin: 10px 0;
-}
-
-.bottom-image-link {
-    align-self: flex-start;
-    text-align: left;
-    margin-top: auto;
-}
-
-.bottom-image-link img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 20px;
-}
-
-.main-right {
-    grid-area: main-right;
+#highlight-links {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 20px;
-    padding-top: 0%;
-    min-width: 0;
-    /* Prevent overflow and enable proper shrinking */
-}
-
-.contact-us-link {
-    background-color: #124E66;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    border-radius: 50px;
-    margin-bottom: auto;
-    text-decoration: none;
-}
-
-.contact-us-link:hover {
-    color: #95A9AD;
-    text-decoration: underline;
+    gap: 20px;
 }
 
 .highlight {
     background: linear-gradient(45deg, #124e66b3, #748d92b3);
-    color: white;
     padding: 20px;
     border-radius: 50px;
     width: 100%;
-    margin-top: 20px;
-    text-decoration: none;
-    max-width: 80%;
+    box-sizing: border-box;
 }
 
 .owner-info {
@@ -254,107 +191,72 @@ p {
     gap: 10px;
 }
 
-.owner-info a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: white;
-    text-decoration: none;
-}
-
-.owner-info a img {
-    border-radius: 50%;
-    width: 100px;
-    height: auto;
-}
-
 footer {
-    grid-area: footer; /* Assign the footer to the footer grid area */
-    background-color: #212A31;
-    color: white;
-    text-align: center; /* Center the text */
-    padding: 10px; /* Add padding for better spacing */
-    width: 100%; /* Ensure the footer spans the full width */
-    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    width: 100%;
 }
 
+@media (min-width: 1201px) {
 
-/* Large screens (above 1300px) */
-@media (min-width: 1300px) {
-
+    header,
     #nav-tablet,
-    #nav-mobile,
-    #foot {
+    #social-foot {
         display: none;
     }
 }
 
-/* Tablet screens (601px - 1299px) */
-@media (min-width: 601px) and (max-width: 1299px) {
-    /* Hide desktop and mobile nav elements */
-    #nav-desktop, 
-    #nav-mobile,
-    #fullscreen-foot,
-    #social-foot,
+@media (min-width: 601px) and (max-width: 1200px) {
+
+    header,
     .overlay,
-    .contact-us-link,
-    .bottom-content h3,
-    .bottom-content p {
+    #nav-desktop,
+    #social-foot,
+    #contact-us-link,
+    #bottom-content h3,
+    #bottom-content p {
         display: none;
     }
 
     .container {
-        display: grid;
-        grid-template-columns: 1fr; /* Single column layout */
-        grid-template-rows: auto auto auto auto; 
-        grid-template-areas: 
-            "sidebar"
-            "main-left"
-            "main-right"
-            "foot";
-        width: 100vw;
+        display: flex;
+        flex-direction: column;
     }
 
-    .sidebar {
-        grid-area: sidebar;
-        background: #212A31;
+    aside {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        padding: 0 20px;
     }
 
-    .sidebar .logo {
-        max-width: 150px; /* Adjust logo size */
+    aside .logo {
+        max-width: 150px
     }
 
-    .bottom-content {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-    }
-
-    .main {
-        display: block; /* Reset flex display for single column */
-        background: none; /* Remove background image for clarity */
-        padding: 0;
+    main {
+        display: block;
+        background: none;
+        padding: 0 20px;
         border: none;
         border-radius: 0;
-        position: relative;
     }
 
-    .main-left {
-        grid-area: main-left;
+
+    #main-left {
         position: relative;
-        background-image: url(/JGroFabricationLLC-Option2/assets/images/IMG_1317.jpg); /* Reapply the background */
+        background-image: url(/JGroFabricationLLC-Option2/assets/images/Hero.png);
         background-size: cover;
         background-position: center;
-        border-left: 20px solid #212A31;
-        border-right: 20px solid #212A31;
-        border-radius: 50px;
-        padding: 20px;
-        color: white;
-        overflow: hidden; /* Ensure the overlay doesn't overflow */
+        background-repeat: no-repeat;
+        border: 20px solid #212A31;
+        border-radius: 70px;
+        padding:  20px;
+        box-sizing: border-box;
+        width: 100%;
     }
 
     .overlay-smallscreen {
@@ -364,40 +266,35 @@ footer {
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
-        border-radius:initial; /* Match the parent's border-radius */
+        border-radius: 50px;
         z-index: 1;
     }
 
-    .main-left .text-content, .nav, .bottom-image-link {
-        position: relative;
+    #main-left>*:not(.overlay-smallscreen) {
         z-index: 2;
     }
 
-    .main-right {
-        grid-area: main-right;
-        display: flex;
-        flex-direction: row; /* Align children in a row */
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        gap: 20px; /* Add space between the children */
-        width: 100%;
-        min-width: 0; /* Prevent overflow and enable proper shrinking */
-    }
+    h1{padding-top: 20px;}
 
-    .highlight,
-    .owner-info {
-        flex: 1; /* Allow elements to share the available space equally */
-        max-width: calc(50% - 10px); /* Max width for each, adjusting for the gap */
-        padding: 20px;
-    }
+    #bottom-image-link{padding-top: 20px;}
 
-    .highlight {
+    #main-right {
         display: flex;
         flex-direction: column;
-        align-items: flex-start; /* Align items to the start */
-        text-align: left;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+        width: 100%;
     }
+
+    #highlight-links {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .highlight{flex: 1;
+        max-width: calc(50% - 10px);
+        }
 
     .owner-info {
         display: flex;
@@ -407,68 +304,54 @@ footer {
         gap: 10px;
     }
 
-    .owner-info img {
-        border-radius: 50%;
-        width: 100px;
-        height: auto;
-    }
-
-    #foot{background-color: #212A31;
-    color: white;
-    text-align: center; /* Center the text */
-    padding: 10px; /* Add padding for better spacing */
-    width: 100%; /* Ensure the footer spans the full width */
-    font-size: small;
-}}
-
-/* Mobile screens (up to 600px) */
-@media (max-width: 600px) {
-    #nav-desktop, 
-    #nav-tablet,
-    #fullscreen-foot,
-    .overlay,
-    .contact-us-link,
-    .bottom-content {
-        display: none;
-    }
-
-
-    .container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto;
-        grid-template-areas: 
-            "sidebar"
-            "main-left"
-            "main-right"
-            "foot";
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
         width: 100%;
     }
 
-    .sidebar {
-        grid-area: sidebar;
-        background: #212A31;
+}
+
+@media (max-width: 600px) {
+    aside,
+    .overlay,
+    #nav-desktop,
+    #nav-tablet,
+    #contact-us-link{
+        display: none;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        position: relative;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        z-index: 10;
+        padding: 0 20px;
     }
 
-    .sidebar .logo {
-        max-width: 150px; /* Adjust logo size */
+    header .logo {
+        max-width: 150px
     }
 
     .dropdown-content {
-        display: none; /* Ensure it starts as hidden */
-        flex-direction: column; /* Arrange items in a column */
+        position: absolute;
+        display: none;
+        flex-direction: column;
         align-items: flex-start;
         padding: 10px;
         border-radius: 10px;
-        position: absolute; /* Position it absolutely if needed */
-        top: 100%; /* Position it below the dropdown menu */
-        right: -20%;
-    
+        position: absolute;
+        top: 80%;
+        right: -10%;
+        z-index: 10;
     }
 
     .dropdown-content ul {
@@ -488,7 +371,7 @@ footer {
         padding: 8px;
         padding-right: 20px;
         display: block;
-        white-space: nowrap; /* Prevent wrapping */
+        white-space: nowrap;
     }
 
     .dropdown-content ul li a:hover {
@@ -496,27 +379,27 @@ footer {
         text-decoration: underline;
     }
 
-    .main {
-        display: block; /* Reset flex display for single column */
-        background: none; /* Remove background image for clarity */
+    main {
+        position: relative;
+        display: block;
+        background: none;
         padding: 0;
         border: none;
         border-radius: 0;
-        position: relative;
     }
 
-    .main-left {
-        grid-area: main-left;
+
+    #main-left {
         position: relative;
-        background-image: url(/JGroFabricationLLC-Option2/assets/images/IMG_1317.jpg); /* Reapply the background */
+        background-image: url(/JGroFabricationLLC-Option2/assets/images/Hero.png);
         background-size: cover;
         background-position: center;
-        border-left: 20px solid #212A31;
-        border-right: 20px solid #212A31;
-        border-radius: 50px;
-        padding: 5px;
-        color: white;
-        overflow: hidden; /* Ensure the overlay doesn't overflow */
+        background-repeat: no-repeat;
+        border: 20px solid #212A31;
+        border-radius: 70px;
+        padding:  20px;
+        box-sizing: border-box;
+        width: 100%;
     }
 
     .overlay-smallscreen {
@@ -526,45 +409,51 @@ footer {
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
-        border-radius:initial; /* Match the parent's border-radius */
+        border-radius: 50px;
         z-index: 1;
     }
 
-    .main-left .text-content, .nav, .bottom-image-link {
-        position: relative;
+    #main-left>*:not(.overlay-smallscreen) {
         z-index: 2;
     }
 
-    .main-right {
-        grid-area: main-right;
+    h1{padding-top: 20px;}
+
+    #bottom-image-link{padding-top: 20px;}
+
+    #main-right {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%; /* Adjusted to 100% */
-    }
-    
-    .highlight,
-    .owner-info {
-        width: 100%; /* Ensure the child elements take up the full width */
-        max-width: 100%; /* You can adjust this as needed */
-        padding: 20px;
+        width: 100%;
+        padding: 0 20px;
     }
 
-    #foot {
-        text-align: center; /* Center the text within the footer */
-        background-color: #212A31; /* Ensure the background matches the design */
-        color: white; /* Text color for better visibility */
+    .owner-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
     }
-    
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+        width: 100%;
+    }
+
     #social-foot {
-        display: flex; /* Use flexbox for layout */
-        justify-content: center; /* Center the icons horizontally */
-        align-items: center; /* Center the icons vertically if necessary */
-        gap: 10px; /* Add some space between the icons */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
     }
     
     #social-foot img {
-        width: 30px; /* Adjust the size of the icons */
-        height: auto; /* Maintain aspect ratio */
+        width: 30px;
+        height: auto;
     }
 }

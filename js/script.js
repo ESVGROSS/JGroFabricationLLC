@@ -24,25 +24,28 @@ document.querySelectorAll('#dropdown-content ul li a').forEach(item => {
 
 // Function to toggle the 'See More' section
 function seeMore() {
+    // Get the elements by their IDs
     var dots = document.getElementById("dots");
     var moreText = document.getElementById("more");
     var btnText = document.getElementById("myBtn");
 
+    // Toggle visibility and update the button text and sessionStorage
     if (dots.style.display === "none") {
         dots.style.display = "inline";
         btnText.innerHTML = "See more";
         moreText.style.display = "none";
-        sessionStorage.setItem('galleryExpanded', 'false'); // Update sessionStorage
+        sessionStorage.setItem('galleryExpanded', 'false');
     } else {
         dots.style.display = "none";
         btnText.innerHTML = "See less";
         moreText.style.display = "inline";
-        sessionStorage.setItem('galleryExpanded', 'true'); // Update sessionStorage
+        sessionStorage.setItem('galleryExpanded', 'true');
     }
 }
 
 // Function to reset the gallery state on page load
 function resetGalleryState() {
+    // Get the elements by their IDs
     var dots = document.getElementById("dots");
     var moreText = document.getElementById("more");
     var btnText = document.getElementById("myBtn");
@@ -67,7 +70,7 @@ document.addEventListener('DOMContentLoaded', resetGalleryState);
 
 // Event listener to reset the gallery state when navigating away from the page
 window.addEventListener('beforeunload', function() {
-    sessionStorage.removeItem('galleryExpanded'); // Remove sessionStorage on page unload
+    sessionStorage.removeItem('galleryExpanded'); // Clear sessionStorage on page unload
 });
 
 
@@ -77,19 +80,26 @@ function openLightbox(image) {
     var expandedImg = document.getElementById("expandedImg");
     var captionText = document.getElementById("caption");
 
+    // Display the lightbox
     lightbox.style.display = "flex";
+
+    // Set the source of the expanded image to the clicked image's source
     expandedImg.src = image.src;
-    captionText.innerHTML = image.alt; // Use alt text for caption, can be customized
+
+    // Set the caption text to the alt attribute of the clicked image
+    captionText.innerHTML = image.alt || ''; // Fallback to empty string if no alt text
 }
 
 // Function to close the lightbox
 function closeLightbox() {
     var lightbox = document.getElementById("lightbox");
+    // Hide the lightbox
     lightbox.style.display = "none";
 }
 
 // Event listener to close lightbox when clicking outside the image
 document.getElementById("lightbox").addEventListener("click", function(event) {
+    // Close lightbox only if the click is outside the expanded image
     if (event.target === this) {
         closeLightbox();
     }
@@ -97,14 +107,16 @@ document.getElementById("lightbox").addEventListener("click", function(event) {
 
 // Event listener to close lightbox with escape key
 document.addEventListener("keydown", function(event) {
+    // Check if the pressed key is Escape
     if (event.key === "Escape") {
         closeLightbox();
     }
 });
 
 // Attach click event to all gallery images
-document.querySelectorAll("#gallery img, #more img").forEach(img => {
+document.querySelectorAll("#gallery img, #more img").forEach(function(img) {
     img.addEventListener("click", function() {
         openLightbox(this);
     });
 });
+

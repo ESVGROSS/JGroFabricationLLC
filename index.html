@@ -14,24 +14,25 @@
 </head>
 
 <body>
-    <!-- Full Size Screen -->
-    <div class="container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <img src="assets/images/JGroLogoWhiteText.png" alt="Logo" class="logo">
-            <div class="nav" id="nav-mobile">
-                <a id="dropdown-menu" onclick="myFunction()">Menu</a>
-                <div class="dropdown-content" id="dropdown-content">
-                    <ul>
-                        <li><a href="index.html" onclick="closeDropdown()">Home</a></li>
-                        <li><a href="public/services.html" onclick="closeDropdown()">Services</a></li>
-                        <li><a href="public/gallery.html" onclick="closeDropdown()">Gallery</a></li>
-                        <li><a href="public/about.html" onclick="closeDropdown()">About Us</a></li>
-                        <li><a href="public/contact.html" onclick="closeDropdown()">Get In Touch</a></li>
-                    </ul>
-                </div>
+    <header>
+        <img src="assets/images/JGroLogoWhiteText.png" alt="Logo" class="logo">
+        <div class="nav" id="nav-mobile">
+            <a id="dropdown-menu" onclick="myFunction()">Menu</a>
+            <div class="dropdown-content" id="dropdown-content">
+                <ul>
+                    <li><a href="index.html" onclick="closeDropdown()">Home</a></li>
+                    <li><a href="public/services.html" onclick="closeDropdown()">Services</a></li>
+                    <li><a href="public/gallery.html" onclick="closeDropdown()">Gallery</a></li>
+                    <li><a href="public/about.html" onclick="closeDropdown()">About Us</a></li>
+                    <li><a href="public/contact.html" onclick="closeDropdown()">Get In Touch</a></li>
+                </ul>
             </div>
-            <div class="bottom-content">
+        </div>
+    </header>
+    <div class="container">
+        <aside>
+            <img src="assets/images/JGroLogoWhiteText.png" alt="Logo" class="logo">
+            <div id="bottom-content">
                 <h3>Follow Us</h3>
                 <p>Explore our latest projects, gain insights into our
                     craftsmanship, and stay up-to-date with exciting news and behind-the-scenes content.</p>
@@ -44,39 +45,40 @@
                     </a>
                 </div>
             </div>
-        </div>
-        <main class="main">
+        </aside>
+        <main>
             <div class="overlay"></div>
-            <div class="main-left">
+            <section id="main-left">
                 <div class="overlay-smallscreen"></div>
-                <div class="nav" id="nav-desktop">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="public/services.html">Services</a></li>
-                        <li><a href="public/gallery.html">Gallery</a></li>
-                        <li><a href="public/about.html">About Us</a></li>
-                    </ul>
-                </div>
-                <div class="nav" id="nav-tablet">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="public/services.html">Services</a></li>
-                        <li><a href="public/gallery.html">Gallery</a></li>
-                        <li><a href="public/about.html">About Us</a></li>
-                        <li><a href="public/contact.html">Get In Touch</a></li>
-                    </ul>
-                </div>
-                <div class="text-content">
-                    <h1>Premier Fabrication Services</h1>
-                    <h2>Serving The Golden Isles and Beyond</h2>
-                </div>
-                <a class="bottom-image-link" href="public/contact.html">
+                <nav>
+                    <div class="nav" id="nav-desktop">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="public/services.html">Services</a></li>
+                            <li><a href="public/gallery.html">Gallery</a></li>
+                            <li><a href="public/about.html">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav" id="nav-tablet">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="public/services.html">Services</a></li>
+                            <li><a href="public/gallery.html">Gallery</a></li>
+                            <li><a href="public/about.html">About Us</a></li>
+                            <li><a href="public/contact.html">Get In Touch</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <h1>Premier Fabrication<br>Services</h1>
+                <h2>Serving The Golden Isles and Beyond</h2>
+                <a id="bottom-image-link" href="public/contact.html">
                     <img src="assets/images/Concept to Creation.png" alt="Concept to Creation">
                 </a>
-            </div>
-            <div class="main-right" id="main-right-desktop">
-                <a class="contact-us-link" href="public/contact.html">Get In Touch</a>
-                <a href="public/services.html" class="highlight">
+            </section>
+            <section id="main-right">
+                <a class="nav" id="contact-us-link" href="public/contact.html">Get In Touch</a>
+                <div id="highlight-links">
+                  <a class="highlight" href="public/services.html">
                     <h3>What We Do</h3>
                     <p>JGro Fabrication delivers top-tier, certified metal fabrication and welding services across
                         diverse materials and industries, from aerospace to automotive and marine, ensuring quality and
@@ -86,23 +88,21 @@
                     <img src="assets/images/Jake Headshot.png" alt="Jake Headshot">
                     <h3>Meet The Owner</h3>
                 </a>
-            </div>
-            <div id="foot">
-                <p>JGro Fabrication LLC | All Rights Reserved &copy; 2024</p>
-                <div class="social-icons" id="social-foot">
-                    <a href="https://m.facebook.com/people/JGro-Fabrication-LLC/61557983825334/">
-                        <img src="assets/images/Facebook_Logo_Primary.png" alt="Facebook Logo">
-                    </a>
-                    <a href="https://www.instagram.com/j.grofabrication?igsh=a2V5eTdqaThkdHNn">
-                        <img src="assets/images/Instagram_Glyph_Gradient.png" alt="Instagram Logo">
-                    </a>
                 </div>
-            </div>
+            </section>
         </main>
-        <footer id="fullscreen-foot">
-            <p>JGro Fabrication LLC | All Rights Reserved &copy; 2024</p>
-        </footer>
     </div>
+    <footer>
+        <p>JGro Fabrication LLC | All Rights Reserved &copy; 2024</p>
+        <div class="social-icons" id="social-foot">
+            <a href="https://m.facebook.com/people/JGro-Fabrication-LLC/61557983825334/">
+                <img src="assets/images/Facebook_Logo_Primary.png" alt="Facebook Logo">
+            </a>
+            <a href="https://www.instagram.com/j.grofabrication?igsh=a2V5eTdqaThkdHNn">
+                <img src="assets/images/Instagram_Glyph_Gradient.png" alt="Instagram Logo">
+            </a>
+        </div>
+    </footer>
     <script src="/JGroFabricationLLC-Option2/js/script.js"></script>
 </body>
 
