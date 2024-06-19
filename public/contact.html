@@ -16,106 +16,68 @@
 </head>
 
 <body>
-    <!-- Full Size Screen -->
-    <div class="container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <img src="/JGroFabricationLLC-Option2/assets/images/JGroLogoWhiteText.png" alt="Logo" class="logo">
-            <div class="nav" id="nav-mobile">
-                <a id="dropdown-menu" onclick="myFunction()">Menu</a>
-                <div class="dropdown-content" id="dropdown-content">
-                    <ul>
-                        <li><a href="/JGroFabricationLLC-Option2/index.html" onclick="closeDropdown()">Home</a></li>
-                        <li><a href="/JGroFabricationLLC-Option2/public/services.html"
-                                onclick="closeDropdown()">Services</a></li>
-                        <li><a href="/JGroFabricationLLC-Option2/public/gallery.html"
-                                onclick="closeDropdown()">Gallery</a></li>
-                        <li><a href="/JGroFabricationLLC-Option2/public/about.html" onclick="closeDropdown()">About
-                                Us</a></li>
-                        <li><a href="/JGroFabricationLLC-Option2/public/contact.html" onclick="closeDropdown()">Get In
-                                Touch</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="nav" id="nav-tablet">
+    <header>
+        <img src="/JGroFabricationLLC-Option2/assets/images/JGroLogoWhiteText.png" alt="Logo" class="logo">
+        <div class="nav" id="nav-mobile">
+            <a id="dropdown-menu" onclick="myFunction()">Menu</a>
+            <div class="dropdown-content" id="dropdown-content">
                 <ul>
-                    <li><a href="/JGroFabricationLLC-Option2/index.html">Home</a></li>
-                    <li><a href="/JGroFabricationLLC-Option2/public/services.html">Services</a></li>
-                    <li><a href="/JGroFabricationLLC-Option2/public/gallery.html">Gallery</a></li>
-                    <li><a href="/JGroFabricationLLC-Option2/public/about.html">About Us</a></li>
-                    <li><a href="/JGroFabricationLLC-Option2/public/contact.html">Get In Touch</a></li>
+                    <li><a href="/JGroFabricationLLC-Option2/index.html" onclick="closeDropdown()">Home</a></li>
+                    <li><a href="/JGroFabricationLLC-Option2/public/services.html"
+                            onclick="closeDropdown()">Services</a></li>
+                    <li><a href="/JGroFabricationLLC-Option2/public/gallery.html" onclick="closeDropdown()">Gallery</a>
+                    </li>
+                    <li><a href="/JGroFabricationLLC-Option2/public/about.html" onclick="closeDropdown()">About Us</a>
+                    </li>
+                    <li><a href="/JGroFabricationLLC-Option2/public/contact.html" onclick="closeDropdown()">Get In
+                            Touch</a></li>
                 </ul>
             </div>
-            <div class="social-icons">
-                <a href="https://m.facebook.com/people/JGro-Fabrication-LLC/61557983825334/">
-                    <img src="/JGroFabricationLLC-Option2/assets/images/Facebook_Logo_Primary.png" alt="Facebook Logo">
-                </a>
-                <a href="https://www.instagram.com/j.grofabrication?igsh=a2V5eTdqaThkdHNn">
-                    <img src="/JGroFabricationLLC-Option2/assets/images/Instagram_Glyph_Gradient.png"
-                        alt="Instagram Logo">
-                </a>
-            </div>
         </div>
-        <main>
-            <div class="content-container">
-                <div id="intouch">
-                    <h3>Get in Touch</h3>
-                    <p>Have a project in mind or need expert advice? Reach out today. Whether it's about a specific
-                        service, a custom project, or just a general inquiry, our team is ready to assist you. We're
-                        proud to serve the Golden Isles and beyond, delivering exceptional metal fabrication solutions tailored to your needs.</p>
-                    <ul>
-                        <li>
-                            <img src="/JGroFabricationLLC-Option2/assets/images/call.png" alt="phone">
-                            <a id="mobilephone" href="tel:+16105739500">610&#8209;573&#8209;9500</a> <!-- Visible only on small screens -->
-                            <p id="desktopphone">610&#8209;573&#8209;9500</p> <!-- Visible only on large screens -->
-                        </li>
-                        <li>
-                            <img src="/JGroFabricationLLC-Option2/assets/images/mail.png" alt="mail">
-                            <a href="mailto:J.Gross@GRoFabricationLLC.com">J.Gross@JGroFabricationLLC.com</a>
-                        </li>
-                        <li>
-                            <img src="/JGroFabricationLLC-Option2/assets/images/location.png" alt="location">
-                            <a href="https://maps.app.goo.gl/bCCsWmB1sXVEf8Hc6">Townsend GA 31331</a>
-                        </li>
-                    </ul>
-                    <h3>Follow Us</h3>
-                    <p>Explore our latest projects, gain insights into our craftsmanship, and stay up-to-date with exciting news and behind-the-scenes content.</p>
-                    <div class="social-icons" id="social-contact">
-                        <a href="https://m.facebook.com/people/JGro-Fabrication-LLC/61557983825334/">
-                            <img src="/JGroFabricationLLC-Option2/assets/images/Facebook_Logo_Primary.png" alt="Facebook Logo">
-                        </a>
-                        <a href="https://www.instagram.com/j.grofabrication?igsh=a2V5eTdqaThkdHNn">
-                            <img src="/JGroFabricationLLC-Option2/assets/images/Instagram_Glyph_Gradient.png" alt="Instagram Logo">
-                        </a>
-                    </div>
-                </div>
-                <div class="wrapper">
-                    <h3>Tell us how we're doing!</h3>
-                    <form action="/JGroFabricationLLC-Option2/public/send_mail.php" method="post">
-                        <div class="rating">
-                            <input type="number" name="rating" hidden>
-                            <i class="bx bx-star star"></i>
-                            <i class="bx bx-star star"></i>
-                            <i class="bx bx-star star"></i>
-                            <i class="bx bx-star star"></i>
-                            <i class="bx bx-star star"></i>
-                        </div>
-                        <textarea name="name" cols="30" rows="1" placeholder="Name"></textarea>
-                        <textarea name="email" cols="30" rows="1" placeholder="E-mail"></textarea>
-                        <textarea name="opinion" cols="30" rows="5" placeholder="Your opinion..."></textarea>
-                        <!-- Google reCAPTCHA widget -->
-                        <div class="g-recaptcha" data-sitekey="6LeDF_kpAAAAAMb_aJTgQz2RlsnYAFu26hTbtp1H"></div>
-                        <div class="btn-group">
-                            <button type="submit" class="btn submit">Submit</button>
-                            <button class="btn cancel" type="reset">Cancel</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </main>
-        <footer>
-            <p>JGro Fabrication LLC | All Rights Reserved &copy; 2024</p>
-            <div class="social-icons" id="social-foot">
+        <div class="nav" id="nav-tablet">
+            <ul>
+                <li><a href="/JGroFabricationLLC-Option2/index.html">Home</a></li>
+                <li><a href="/JGroFabricationLLC-Option2/public/services.html">Services</a></li>
+                <li><a href="/JGroFabricationLLC-Option2/public/gallery.html">Gallery</a></li>
+                <li><a href="/JGroFabricationLLC-Option2/public/about.html">About Us</a></li>
+                <li><a href="/JGroFabricationLLC-Option2/public/contact.html">Get In Touch</a></li>
+            </ul>
+        </div>
+        <div class="social-icons">
+            <a href="https://m.facebook.com/people/JGro-Fabrication-LLC/61557983825334/">
+                <img src="/JGroFabricationLLC-Option2/assets/images/Facebook_Logo_Primary.png" alt="Facebook Logo">
+            </a>
+            <a href="https://www.instagram.com/j.grofabrication?igsh=a2V5eTdqaThkdHNn">
+                <img src="/JGroFabricationLLC-Option2/assets/images/Instagram_Glyph_Gradient.png" alt="Instagram Logo">
+            </a>
+        </div>
+    </header>
+    <main id="contact">
+        <section id="intouch">
+            <h2>Get in Touch</h2>
+            <p>Have a project in mind or need expert advice? Reach out today. Whether it's about a specific
+                service, a custom project, or just a general inquiry, our team is ready to assist you. We're
+                proud to serve the Golden Isles and beyond, delivering exceptional metal fabrication solutions tailored
+                to your needs.</p>
+            <ul>
+                <li>
+                    <img src="/JGroFabricationLLC-Option2/assets/images/call.png" alt="phone">
+                    <a class="phone-link" href="tel:+16105739500">610&#8209;573&#8209;9500</a>
+                    <span class="phone-text">610&#8209;573&#8209;9500</span>
+                </li>
+                <li>
+                    <img src="/JGroFabricationLLC-Option2/assets/images/mail.png" alt="mail">
+                    <a href="mailto:J.Gross@GRoFabricationLLC.com">J.Gross@JGroFabricationLLC.com</a>
+                </li>
+                <li>
+                    <img src="/JGroFabricationLLC-Option2/assets/images/location.png" alt="location">
+                    <a href="https://maps.app.goo.gl/bCCsWmB1sXVEf8Hc6">Townsend GA 31331</a>
+                </li>
+            </ul>
+            <h3>Follow Us</h3>
+            <p>Explore our latest projects, gain insights into our craftsmanship, and stay up-to-date with exciting news
+                and behind-the-scenes content.</p>
+            <div id="social-contact">
                 <a href="https://m.facebook.com/people/JGro-Fabrication-LLC/61557983825334/">
                     <img src="/JGroFabricationLLC-Option2/assets/images/Facebook_Logo_Primary.png" alt="Facebook Logo">
                 </a>
@@ -124,8 +86,41 @@
                         alt="Instagram Logo">
                 </a>
             </div>
-        </footer>
-    </div>
+        </section>
+        <section class="wrapper">
+            <h3>Tell us how we're doing!</h3>
+            <form action="/JGroFabricationLLC-Option2/public/send_mail.php" method="post">
+                <div class="rating">
+                    <input type="number" name="rating" hidden>
+                    <i class="bx bx-star star"></i>
+                    <i class="bx bx-star star"></i>
+                    <i class="bx bx-star star"></i>
+                    <i class="bx bx-star star"></i>
+                    <i class="bx bx-star star"></i>
+                </div>
+                <textarea name="name" cols="30" rows="1" placeholder="Name"></textarea>
+                <textarea name="email" cols="30" rows="1" placeholder="E-mail"></textarea>
+                <textarea name="opinion" cols="30" rows="5" placeholder="Your opinion..."></textarea>
+                <!-- Google reCAPTCHA widget -->
+                <div class="g-recaptcha" data-sitekey="6LeDF_kpAAAAAMb_aJTgQz2RlsnYAFu26hTbtp1H"></div>
+                <div class="btn-group">
+                    <button type="submit" class="btn submit">Submit</button>
+                    <button class="btn cancel" type="reset">Cancel</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>JGro Fabrication LLC | All Rights Reserved &copy; 2024</p>
+        <div class="social-icons" id="social-foot">
+            <a href="https://m.facebook.com/people/JGro-Fabrication-LLC/61557983825334/">
+                <img src="/JGroFabricationLLC-Option2/assets/images/Facebook_Logo_Primary.png" alt="Facebook Logo">
+            </a>
+            <a href="https://www.instagram.com/j.grofabrication?igsh=a2V5eTdqaThkdHNn">
+                <img src="/JGroFabricationLLC-Option2/assets/images/Instagram_Glyph_Gradient.png" alt="Instagram Logo">
+            </a>
+        </div>
+    </footer>
     <script src="/JGroFabricationLLC-Option2/js/script.js"></script>
     <script src="/JGroFabricationLLC-Option2/js/RatingForm.js"></script>
 </body>

@@ -1,3 +1,4 @@
+//DROPDOWN NAV MENU
 function myFunction() {
     var dropdownContent = document.getElementById("dropdown-content");
 
@@ -22,6 +23,8 @@ document.querySelectorAll('#dropdown-content ul li a').forEach(item => {
     });
 });
 
+
+//GALLERY SEE MORE
 // Function to toggle the 'See More' section
 function seeMore() {
     // Get the elements by their IDs
@@ -74,6 +77,7 @@ window.addEventListener('beforeunload', function() {
 });
 
 
+//GALLERY LIGHTBOX
 // Function to open the lightbox and display the clicked image
 function openLightbox(image) {
     var lightbox = document.getElementById("lightbox");
@@ -120,3 +124,16 @@ document.querySelectorAll("#gallery img, #more img").forEach(function(img) {
     });
 });
 
+
+//DETERMINE MOBILE OR DESKTOP
+function isMobileDevice() {
+    return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
+
+window.onload = function() {
+    if (isMobileDevice()) {
+        // Show phone link and hide text on mobile devices
+        document.querySelector('.phone-link').style.display = 'inline';
+        document.querySelector('.phone-text').style.display = 'none';
+    }
+};
