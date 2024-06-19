@@ -103,6 +103,7 @@ main {
     grid-column: span 2;
     display: flex;
     z-index: 1;
+    height: 100vh
 }
 
 main .overlay {
