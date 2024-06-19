@@ -49,7 +49,6 @@ a {
 .container {
     display: grid;
     grid-template-columns: 0.2fr 1fr;
-    grid-template-rows: 1fr
     grid-template-areas:
         "aside main";
 }
@@ -104,6 +103,7 @@ main {
     grid-column: span 2;
     display: flex;
     z-index: 1;
+    height: 100vh;
 }
 
 main .overlay {
