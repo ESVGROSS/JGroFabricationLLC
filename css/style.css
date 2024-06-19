@@ -51,6 +51,7 @@ a {
     grid-template-columns: 0.2fr 1fr;
     grid-template-areas:
         "aside main";
+    height: 100%;
 }
 
 aside {
