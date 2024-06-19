@@ -232,7 +232,7 @@ p {
 
 .video {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px; 
+    border-radius: 10px;
     transition: box-shadow 0.3s ease;
     margin: 10px;
 }
@@ -620,12 +620,10 @@ p {
     max-width: 40px;
     max-height: 40px;
     transition: transform 0.3s;
-    /* Smooth transition for hover effect */
 }
 
 #social-contact a:hover img {
     transform: scale(1.1);
-    /* Slightly enlarge on hover */
 }
 
 /*#region*/
@@ -752,7 +750,7 @@ textarea {
     align-items: center;
     padding-top: 50px;
     min-height: 80vh;
-    min-width: 100vw;  
+    min-width: 100vw;
 }
 
 #thanks img {
@@ -760,6 +758,7 @@ textarea {
     height: auto;
     margin-bottom: 20px;
 }
+
 /*#endregion*/
 
 /* Large screens (above 1300px) */
@@ -799,6 +798,11 @@ textarea {
     .lightbox-content {
         max-width: 80%;
         max-height: 80%;
+    }
+
+    #social-contact a img {
+        max-width: 35px;
+        max-height: 35px;
     }
 }
 
@@ -843,6 +847,11 @@ textarea {
         width: 90%;
     }
 
+    #social-contact a img {
+        max-width: 30px;
+        max-height: 30px;
+
+    }
 }
 
 
@@ -911,4 +920,8 @@ textarea {
         margin: 10px auto;
         width: 90%;
     }
-}
+
+    #social-contact a img {
+        max-width: 25px;
+        max-height: 25px;
+}}
