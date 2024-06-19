@@ -800,10 +800,6 @@ textarea {
         max-height: 80%;
     }
 
-    #social-contact a img {
-        max-width: 35px;
-        max-height: 35px;
-    }
 }
 
 @media (min-width: 601px) and (max-width: 899px) {
@@ -847,11 +843,6 @@ textarea {
         width: 90%;
     }
 
-    #social-contact a img {
-        max-width: 30px;
-        max-height: 30px;
-
-    }
 }
 
 
@@ -921,7 +912,4 @@ textarea {
         width: 90%;
     }
 
-    #social-contact a img {
-        max-width: 25px;
-        max-height: 25px;
-}}
+}
