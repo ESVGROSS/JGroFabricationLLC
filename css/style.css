@@ -123,12 +123,10 @@ main>*:not(.overlay) {
 
 #main-left {
     width: 55vw;
-    height: 100vh;
 }
 
 #main-right {
     width: 45vw;
-    height: 100vh;
 }
 
 #main-left,
