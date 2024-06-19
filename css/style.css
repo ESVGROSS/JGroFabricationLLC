@@ -52,7 +52,7 @@ a {
     grid-template-rows: auto 1fr;
     grid-template-areas:
         "aside main";
-    height: 100vh;
+    height: 90%;
 }
 
 aside {
