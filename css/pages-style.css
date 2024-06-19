@@ -875,8 +875,8 @@ textarea {
 
     #gallery img,
     #more img {
-        flex: 1 1 calc(100% - 40px);
-        max-width: calc(70% - 40px);
+        flex: 1 1 calc(100% - 20px);
+        max-width: calc(70% - 20px);
     }
 
     .lightbox-content {
