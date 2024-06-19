@@ -46,23 +46,21 @@ a {
     font-size: clamp(1rem, 1vw, 1.5rem);
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 0.2fr 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas:
-        "aside main";
-    height: 90%;
+main {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
 }
 
 aside {
-    grid-area: aside;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
     padding-top: 0%;
     text-align: left;
+    width: 30%;
 }
 
 .logo {
@@ -91,8 +89,7 @@ aside {
     transform: scale(1.1);
 }
 
-main {
-    grid-area: main;
+#main-container {
     position: relative;
     background-image: url(/JGroFabricationLLC-Option2/assets/images/Hero.png);
     background-size: cover;
@@ -107,7 +104,7 @@ main {
     z-index: 1;
 }
 
-main .overlay {
+#main-container .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -119,16 +116,16 @@ main .overlay {
     pointer-events: none;
 }
 
-main>*:not(.overlay) {
+#main-container>*:not(.overlay) {
     z-index: 2;
 }
 
 #main-left {
-    width: 55vw;
+    width: 55%;
 }
 
 #main-right {
-    width: 45vw;
+    width: 45%;
 }
 
 #main-left,
@@ -199,11 +196,11 @@ h2,
 }
 
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 20px;
+    color: white;
+    text-align: center;
+    padding: 10px;
     width: 100%;
+    font-size: small;
 }
 
 @media (min-width: 1201px) {
@@ -227,9 +224,10 @@ footer {
         display: none;
     }
 
-    .container {
+    main {
         display: flex;
         flex-direction: column;
+        height: auto;
     }
 
     aside {
@@ -238,13 +236,14 @@ footer {
         align-items: center;
         justify-content: space-between;
         padding: 0 20px;
+        width: 100%;
     }
 
     aside .logo {
         max-width: 150px
     }
 
-    main {
+    #main-container {
         display: block;
         background: none;
         padding: 0 20px;
@@ -286,12 +285,8 @@ footer {
     #bottom-image-link{padding-top: 20px;}
 
     #main-right {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 20px;
         width: 100%;
+        padding: 0 20px;
     }
 
     #highlight-links {
@@ -299,7 +294,7 @@ footer {
         flex-direction: row;
     }
 
-    .highlight{flex: 1;
+    .highlight{
         max-width: calc(50% - 10px);
         }
 
@@ -309,14 +304,6 @@ footer {
         align-items: center;
         text-align: left;
         gap: 10px;
-    }
-
-    footer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px 0;
-        width: 100%;
     }
 
 }
@@ -330,9 +317,10 @@ footer {
         display: none;
     }
 
-    .container {
+    main {
         display: flex;
         flex-direction: column;
+        height: auto;
     }
 
     header {
@@ -386,7 +374,7 @@ footer {
         text-decoration: underline;
     }
 
-    main {
+    #main-container {
         position: relative;
         display: block;
         background: none;
@@ -429,12 +417,12 @@ footer {
     #bottom-image-link{padding-top: 20px;}
 
     #main-right {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         width: 100%;
         padding: 0 20px;
+        display: flex;
+        flex-direction: row;
     }
+
 
     .owner-info {
         display: flex;
