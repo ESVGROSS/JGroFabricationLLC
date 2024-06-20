@@ -164,7 +164,7 @@ h2,
     background-color: #124E66;
     border-radius: 50px;
     height: fit-content;
-    padding: 25px;
+    padding: 20px;
     display: inline-block;
     align-items: center;
     color: white;
@@ -174,7 +174,7 @@ h2,
 .nav ul {
     list-style: none;
     display: flex;
-    gap: 50px;
+    max-gap: 50px;
 }
 
 .nav a:hover {
