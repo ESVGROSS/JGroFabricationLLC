@@ -434,7 +434,6 @@ p {
 .gallery-text {
     text-align: center;
     padding: 20px 10% 0 10%;
-    margin: 0 40px;
 }
 
 .gallery-container {
@@ -544,7 +543,7 @@ p {
     max-width: 375px;
     height: auto;
     border-radius: 10px;
-    margin: 15px;
+    margin: 20px;
 }
 
 /*#endregion*/
@@ -872,14 +871,14 @@ textarea {
         max-height: 60%;
     }
 
-    #about-head {
-        padding-bottom: 0;
-    }
-
     #about {
         display: block;
         align-items: center;
         padding-bottom: 20px;
+    }
+
+    #about img{
+        max-width: 250px;
     }
 
     #contact {
@@ -898,7 +897,8 @@ textarea {
         width: 90%;
     }
 
-
+    #social-contact a img {
+        max-width: 25px;
         max-height: 25px;
     }
 }
