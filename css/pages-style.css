@@ -442,7 +442,6 @@ p {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
     margin: 0 auto;
     text-align: center;
 }
@@ -542,7 +541,7 @@ p {
 
 #about img {
     float: left;
-    max-width: 350px;
+    max-width: 375px;
     height: auto;
     border-radius: 10px;
     margin: 15px;
@@ -566,7 +565,7 @@ p {
     align-items: flex-start;
     gap: 5%;
     margin-top: 20px;
-    padding: 0 10% 5% 10%;
+    padding: 20px 10% 5% 10%;
 }
 
 #intouch {
@@ -854,10 +853,6 @@ textarea {
         display: none;
     }
 
-    body{
-        text-align:center
-    }
-
     .services {
         display: flex;
         flex-direction: column;
@@ -882,7 +877,7 @@ textarea {
     }
 
     #about {
-        flex-direction: column;
+        display: block;
         align-items: center;
         padding-bottom: 20px;
     }
