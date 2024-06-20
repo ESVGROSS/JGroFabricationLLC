@@ -825,8 +825,7 @@ textarea {
     }
 
     #about-text img{
-        float: none;
-        justify-content: center;
+        max-width:200px;
     }
 
     #contact {
@@ -886,6 +885,7 @@ textarea {
     #about-text img{
         float: none;
         justify-content: center;
+        max-width: 200px;
     }
 
     #contact {
