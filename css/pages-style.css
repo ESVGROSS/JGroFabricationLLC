@@ -539,7 +539,7 @@ p {
     padding-bottom: 1%;
 }
 
-#about img {
+#about-text img {
     float: left;
     max-width: 375px;
     height: auto;
@@ -824,7 +824,7 @@ textarea {
         max-height: 70%;
     }
 
-    #about img{
+    #about-text img{
         max-width: 225px;
         justify-content: center;
     }
@@ -883,8 +883,8 @@ textarea {
         padding-bottom: 20px;
     }
 
-    #about img{
-        max-width: 250px;
+    #about-text img{
+        max-width: 200px;
         justify-content: center;
     }
 
