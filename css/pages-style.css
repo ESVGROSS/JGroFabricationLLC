@@ -826,7 +826,7 @@ textarea {
 
     #about img{
         max-width: 225px;
-        align-item: center;
+        justify-content: center;
     }
 
     #contact {
@@ -884,8 +884,8 @@ textarea {
     }
 
     #about img{
-        max-width: 225px;
-        align-item: center;
+        max-width: 250px;
+        justify-content: center;
     }
 
     #contact {
