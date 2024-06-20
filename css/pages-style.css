@@ -876,15 +876,15 @@ textarea {
         max-height: 60%;
     }
 
-    #about {
+    #about-text {
         display: block;
         align-items: center;
+        justify-content: center;
         padding-bottom: 20px;
     }
 
     #about-text img{
         float: none;
-        justify-content: center;
         max-width: 200px;
     }
 
