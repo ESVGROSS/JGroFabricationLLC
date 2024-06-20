@@ -29,22 +29,22 @@ html {
 }
 
 h1 {
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-size: clamp(3rem, 6vw, 5.5rem);
     font-weight: bold;
 }
 
 h2 {
-    font-size: clamp(2rem, 1vw, 3rem);
+    font-size: clamp(2rem, 1vw, 3.5rem);
 }
 
 h3 {
-    font-size: clamp(1.5rem, 1.5vw, 2rem);
+    font-size: clamp(1.5rem, 1.5vw, 2.5rem);
     padding-bottom: 5px;
 }
 
 p,
 a {
-    font-size: clamp(1rem, 1vw, 1.5rem);
+    font-size: clamp(1rem, 1vw, 2rem);
 }
 
 main {
@@ -539,7 +539,7 @@ p {
 
 #about img {
     float: left;
-    max-width: 400px;
+    max-width: 350px;
     height: auto;
     border-radius: 10px;
     margin: 15px;
@@ -611,8 +611,8 @@ p {
 }
 
 #social-contact a img {
-    max-width: 40px;
-    max-height: 40px;
+    width: 40px;
+    height: 40px;
     transition: transform 0.3s;
 }
 
@@ -794,10 +794,6 @@ textarea {
         max-height: 80%;
     }
 
-    #social-contact a img {
-        max-width: 35px;
-        max-height: 35px;
-    }
 }
 
 @media (min-width: 601px) and (max-width: 899px) {
@@ -841,11 +837,6 @@ textarea {
         width: 90%;
     }
 
-    #social-contact a img {
-        max-width: 30px;
-        max-height: 30px;
-
-    }
 }
 
 
@@ -857,6 +848,10 @@ textarea {
     #video-float-alittle,
     .social-icons {
         display: none;
+    }
+
+    body{
+        text-align:center
     }
 
     .services {
@@ -888,17 +883,6 @@ textarea {
         padding-bottom: 20px;
     }
 
-    #about-text {
-        max-width: 80%;
-    }
-
-    #about img {
-        max-width: 80%;
-        height: auto;
-        margin-bottom: 20px;
-
-    }
-
     #contact {
         flex-direction: column;
         margin: 0;
@@ -915,8 +899,7 @@ textarea {
         width: 90%;
     }
 
-    #social-contact a img {
-        max-width: 25px;
+
         max-height: 25px;
     }
 }
