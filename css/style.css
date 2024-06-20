@@ -24,26 +24,26 @@ a {
 }
 
 html {
-    font-size: clamp(16px, 2vw, 18px);
+    font-size: clamp(15px, 3vw, 20px);
 }
 
 h1 {
-    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-size: clamp(3rem, 6vw, 6rem);
     font-weight: bold;
 }
 
 h2 {
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-size: clamp(2rem, 1vw, 4rem);
 }
 
 h3 {
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-size: clamp(1.75rem, 1.5vw, 3rem);
     padding-bottom: 5px;
 }
 
 p,
 a {
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    font-size: clamp(1.25rem, 1vw, 2rem);
 }
 
 main {
@@ -80,7 +80,7 @@ aside {
 }
 
 .social-icons img {
-    width: 50px;
+    width: 45px;
     height: auto;
     transition: transform 0.3s;
 }
@@ -151,10 +151,14 @@ h2,
     align-self: flex-end;
 }
 
-#bottom-image-link{
-    height: 150px;
-    width: auto;
-    padding-top: 30px;}
+#bottom-image-link {
+    padding-top: 30px;
+}
+
+#bottom-image-link img {
+    max-width: 150px;
+    height: auto;
+}
 
 .nav {
     background-color: #124E66;
@@ -263,7 +267,7 @@ footer {
         background-repeat: no-repeat;
         border: 20px solid #212A31;
         border-radius: 70px;
-        padding:  20px;
+        padding: 20px;
         box-sizing: border-box;
         width: 100%;
     }
@@ -283,9 +287,13 @@ footer {
         z-index: 2;
     }
 
-    h1{padding-top: 20px;}
+    h1 {
+        padding-top: 20px;
+    }
 
-    #bottom-image-link{padding-top: 20px;}
+    #bottom-image-link {
+        padding-top: 20px;
+    }
 
     #main-right {
         width: 100%;
@@ -297,9 +305,9 @@ footer {
         flex-direction: row;
     }
 
-    .highlight{
+    .highlight {
         max-width: calc(50% - 10px);
-        }
+    }
 
     .owner-info {
         display: flex;
@@ -312,11 +320,12 @@ footer {
 }
 
 @media (max-width: 600px) {
+
     aside,
     .overlay,
     #nav-desktop,
     #nav-tablet,
-    #contact-us-link{
+    #contact-us-link {
         display: none;
     }
 
@@ -395,7 +404,7 @@ footer {
         background-repeat: no-repeat;
         border: 20px solid #212A31;
         border-radius: 70px;
-        padding:  20px;
+        padding: 20px;
         box-sizing: border-box;
         width: 100%;
     }
@@ -415,9 +424,13 @@ footer {
         z-index: 2;
     }
 
-    h1{padding-top: 20px;}
+    h1 {
+        padding-top: 20px;
+    }
 
-    #bottom-image-link{padding-top: 20px;}
+    #bottom-image-link {
+        padding-top: 20px;
+    }
 
     #main-right {
         width: 100%;
@@ -449,7 +462,7 @@ footer {
         align-items: center;
         gap: 10px;
     }
-    
+
     #social-foot img {
         width: 30px;
         height: auto;
