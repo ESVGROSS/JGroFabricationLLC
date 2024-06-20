@@ -526,6 +526,7 @@ p {
 /*#region*/
 #about-head {
     text-align: center;
+    padding: 5% 10% 0 10%;
 }
 
 #about {
@@ -824,6 +825,7 @@ textarea {
 
     #about img{
         max-width: 225px;
+        align-item: center;
     }
 
     #contact {
@@ -882,6 +884,7 @@ textarea {
 
     #about img{
         max-width: 225px;
+        align-item: center;
     }
 
     #contact {
