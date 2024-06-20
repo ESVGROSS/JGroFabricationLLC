@@ -565,7 +565,7 @@ p {
     align-items: flex-start;
     gap: 5%;
     margin-top: 20px;
-    padding: 20px 10% 5% 10%;
+    padding: 5% 10% 5% 10%;
 }
 
 #intouch {
@@ -843,7 +843,6 @@ textarea {
     .wrapper {
         margin: 10px auto;
         width: 90%;
-        padding-bottom: 5%;
     }
 
 }
@@ -903,7 +902,6 @@ textarea {
     .wrapper {
         margin: 10px auto;
         width: 90%;
-        padding-bottom: 5%;
     }
 
     #social-contact a img {
