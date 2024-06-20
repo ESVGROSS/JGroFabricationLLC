@@ -825,7 +825,7 @@ textarea {
     }
 
     #about-text img{
-        max-width: 200px;
+        float: none;
         justify-content: center;
     }
 
@@ -884,7 +884,7 @@ textarea {
     }
 
     #about-text img{
-        max-width: 200px;
+        float: none;
         justify-content: center;
     }
 
