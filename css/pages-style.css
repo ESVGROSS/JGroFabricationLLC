@@ -843,6 +843,7 @@ textarea {
     .wrapper {
         margin: 10px auto;
         width: 90%;
+        padding-bottom: 5%;
     }
 
 }
@@ -902,6 +903,7 @@ textarea {
     .wrapper {
         margin: 10px auto;
         width: 90%;
+        padding-bottom: 5%;
     }
 
     #social-contact a img {
