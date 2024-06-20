@@ -41,9 +41,12 @@ h3 {
     padding-bottom: 5px;
 }
 
-p,
-a {
+p {
     font-size: clamp(1rem, 1vw, 2.5rem);
+}
+
+a {
+    font-size: clamp(1rem, 1vw, 3rem);
 }
 
 main {
@@ -164,7 +167,7 @@ h2,
     background-color: #124E66;
     border-radius: 50px;
     height: fit-content;
-    padding: 20px;
+    padding: 25px;
     display: inline-block;
     align-items: center;
     color: white;
