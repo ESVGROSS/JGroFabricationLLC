@@ -156,7 +156,7 @@ h2,
 }
 
 #bottom-image-link img {
-    max-width: 125px;
+    max-width: 100px;
     height: auto;
 }
 
@@ -164,7 +164,7 @@ h2,
     background-color: #124E66;
     border-radius: 50px;
     height: fit-content;
-    padding: 20px;
+    padding: 30px;
     display: inline-block;
     align-items: center;
     color: white;
