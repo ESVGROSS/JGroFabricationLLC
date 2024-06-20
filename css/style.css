@@ -1,0 +1,480 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #212A31;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100vw;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+html {
+    font-size: clamp(15px, 3vw, 20px);
+}
+
+h1 {
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: bold;
+}
+
+h2 {
+    font-size: clamp(2rem, 1vw, 5rem);
+}
+
+h3 {
+    font-size: clamp(1.5rem, 1.5vw, 3.75rem);
+    padding-bottom: 5px;
+}
+
+p,
+a {
+    font-size: clamp(1rem, 1vw, 3.5rem);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    padding-top: 0%;
+    text-align: left;
+    width: 30%;
+}
+
+.logo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: auto;
+}
+
+.social-icons {
+    padding-top: 10px;
+    gap: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 45px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+#main-container {
+    position: relative;
+    background-image: url(/JGroFabricationLLC-Option2/assets/images/Hero.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 20px solid #212A31;
+    border-radius: 70px;
+    padding: 40px;
+    box-sizing: border-box;
+    grid-column: span 2;
+    display: flex;
+    z-index: 1;
+}
+
+#main-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+#main-container>*:not(.overlay) {
+    z-index: 2;
+}
+
+#main-left {
+    width: 55%;
+}
+
+#main-right {
+    width: 45%;
+}
+
+#main-left,
+#main-right {
+    display: flex;
+    flex-direction: column;
+}
+
+#nav-desktop,
+h1,
+h2,
+#bottom-image-link,
+#highlight-links {
+    align-self: flex-start;
+}
+
+#bottom-image-link,
+#highlight-links {
+    margin-top: auto;
+}
+
+#contact-us-link {
+    align-self: flex-end;
+}
+
+#bottom-image-link {
+    padding-top: 30px;
+}
+
+#bottom-image-link img {
+    max-width: 125px;
+    height: auto;
+}
+
+.nav {
+    background-color: #124E66;
+    border-radius: 50px;
+    height: fit-content;
+    padding: 30px;
+    display: inline-block;
+    align-items: center;
+    color: white;
+    box-sizing: border-box;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+.nav a:hover {
+    color: #95A9AD;
+    text-decoration: underline;
+}
+
+#highlight-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.highlight {
+    background: linear-gradient(45deg, #124e66b3, #748d92b3);
+    padding: 20px;
+    border-radius: 50px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.owner-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    font-size: small;
+}
+
+@media (min-width: 1201px) {
+
+    header,
+    #nav-tablet,
+    #social-foot {
+        display: none;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+
+    header,
+    .overlay,
+    #nav-desktop,
+    #social-foot,
+    #contact-us-link,
+    #bottom-content h3,
+    #bottom-content p {
+        display: none;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        width: 100%;
+    }
+
+    aside .logo {
+        max-width: 150px
+    }
+
+    #main-container {
+        display: block;
+        background: none;
+        padding: 0 20px;
+        border: none;
+        border-radius: 0;
+    }
+
+
+    #main-left {
+        position: relative;
+        background-image: url(/JGroFabricationLLC-Option2/assets/images/Hero.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 20px solid #212A31;
+        border-radius: 70px;
+        padding: 20px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .overlay-smallscreen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 50px;
+        z-index: 1;
+    }
+
+    #main-left>*:not(.overlay-smallscreen) {
+        z-index: 2;
+    }
+
+    h1 {
+        padding-top: 20px;
+    }
+
+    #bottom-image-link {
+        padding-top: 20px;
+    }
+
+    #bottom-image-link img {
+        max-width: 100px;
+        height: auto;
+    }
+
+    #main-right {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    #highlight-links {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .highlight {
+        max-width: calc(50% - 10px);
+    }
+
+    .owner-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        gap: 10px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    aside,
+    .overlay,
+    #nav-desktop,
+    #nav-tablet,
+    #contact-us-link {
+        display: none;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    header {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    header .logo {
+        max-width: 150px
+    }
+
+    .dropdown-content {
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        border-radius: 10px;
+        position: absolute;
+        top: 80%;
+        right: -10%;
+        z-index: 10;
+    }
+
+    .dropdown-content ul {
+        list-style: none;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #124E66;
+        border-radius: 10px;
+    }
+
+    .dropdown-content ul li a {
+        color: white;
+        text-decoration: none;
+        text-align: right;
+        padding: 8px;
+        padding-right: 20px;
+        display: block;
+        white-space: nowrap;
+    }
+
+    .dropdown-content ul li a:hover {
+        color: #95A9AD;
+        text-decoration: underline;
+    }
+
+    #main-container {
+        position: relative;
+        display: block;
+        background: none;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+    }
+
+
+    #main-left {
+        position: relative;
+        background-image: url(/JGroFabricationLLC-Option2/assets/images/Hero.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 20px solid #212A31;
+        border-radius: 70px;
+        padding: 20px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .overlay-smallscreen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 50px;
+        z-index: 1;
+    }
+
+    #main-left>*:not(.overlay-smallscreen) {
+        z-index: 2;
+    }
+
+    h1 {
+        padding-top: 20px;
+    }
+
+    #bottom-image-link {
+        padding-top: 20px;
+    }
+
+    #bottom-image-link img {
+        max-width: 100px;
+        height: auto;
+    }
+
+    #main-right {
+        width: 100%;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .owner-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    #social-foot {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #social-foot img {
+        width: 30px;
+        height: auto;
+    }
+}
