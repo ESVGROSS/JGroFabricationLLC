@@ -433,7 +433,7 @@ p {
 
 .gallery-text {
     text-align: center;
-    padding-top: 20px;
+    padding: 20px 10% 0 10%;
     margin: 0 40px;
 }
 
@@ -533,7 +533,7 @@ p {
 
 #about {
     margin-top: 20px;
-    padding: 0 10% 10% 10%;
+    padding: 0 10% 5% 10%;
 }
 
 #about-text p {
@@ -566,13 +566,14 @@ p {
     align-items: flex-start;
     gap: 5%;
     margin-top: 20px;
-    padding: 20%;
+    padding: 0 10% 5% 10%;
 }
 
 #intouch {
     padding: 20px;
     max-width: 800px;
     margin: 20px auto;
+    text-align: center;
 }
 
 #intouch h2,
