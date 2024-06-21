@@ -906,9 +906,4 @@ textarea {
         margin: 10px auto;
         width: 90%;
     }
-
-    #social-contact a img {
-        max-width: 25px;
-        max-height: 25px;
-    }
 }
