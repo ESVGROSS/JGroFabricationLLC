@@ -89,7 +89,7 @@
         </section>
         <section class="wrapper">
             <h3>Tell us how we're doing!</h3>
-            <form method="post">
+            <form action="/public/send_mail.php" method="post">
                 <div class="rating">
                     <input type="number" name="rating" hidden>
                     <i class='bx bx-star star' style="--i: 0;"></i>
@@ -104,7 +104,7 @@
                 <!-- Google reCAPTCHA widget -->
                 <div class="g-recaptcha" data-sitekey="6LeDF_kpAAAAAMb_aJTgQz2RlsnYAFu26hTbtp1H"></div>
                 <div class="btn-group">
-                    <input type="submit" class="btn submit" value="Submit">
+                    <button type="submit" class="btn submit">Submit</button>
                     <button class="btn cancel" type="reset">Cancel</button>
                 </div>
             </form>
@@ -123,11 +123,6 @@
     </footer>
     <script src="/js/script.js"></script>
     <script src="/js/RatingForm.js"></script>
-<?php
-if (isset($_POST["name"])) {
-	require "/public/send_mail.php";
-}
-?>
 </body>
 
 </html>
