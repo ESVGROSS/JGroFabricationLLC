@@ -563,12 +563,14 @@ p {
     justify-content: center;
     align-items: flex-start;
     gap: 5%;
+    margin-top: 20px;
     padding: 5% 10% 5% 10%;
 }
 
 #intouch {
-    padding-bottom: 20px;
+    padding: 20px;
     max-width: 800px;
+    margin: 20px auto;
     text-align: center;
 }
 
