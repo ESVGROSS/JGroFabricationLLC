@@ -559,18 +559,14 @@ p {
 }
 
 #contact-main {
-    display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 5%;
-    margin-top: 20px;
     padding: 5% 10% 5% 10%;
 }
 
 #intouch {
     padding: 20px;
     max-width: 800px;
-    margin: 20px auto;
     text-align: center;
 }
 
@@ -597,12 +593,12 @@ p {
 }
 
 #intouch li a {
-    color: var(--blue);
+    color: #4383FF;
     text-decoration: none;
 }
 
 #intouch li a:hover {
-    color: var(--blue-d-1);
+    color: #3278FF;
     text-decoration: underline;
 }
 
@@ -623,31 +619,6 @@ p {
     transform: scale(1.1);
 }
 
-/*#region*/
-
-:root {
-    --yellow: #FFBD13;
-    --blue: #4383FF;
-    --blue-d-1: #3278FF;
-    --light: #F5F5F5;
-    --grey: #AAA;
-    --white: #FFF;
-    --shadow: 8px 8px 30px rgba(0, 0, 0, .05);
-}
-
-.wrapper {
-    background: var(--white);
-    padding: 2rem;
-    max-width: 576px;
-    width: 100%;
-    border-radius: .75rem;
-    box-shadow: var(--shadow);
-    text-align: center;
-}
-
-.wrapper img{height: 100%; width: auto}
-
-/*#endregion*/
 /*#endregion*/
 
 /* Large screens (above 1300px) */
@@ -721,22 +692,6 @@ p {
         margin: 10px;
     }
 
-    #contact-main {
-        flex-direction: column;
-        margin: 0;
-        padding: 0
-    }
-
-    #intouch {
-        width: 90%;
-        text-align: center;
-    }
-
-    .wrapper {
-        margin: 10px auto;
-        width: 90%;
-    }
-
 }
 
 
@@ -782,19 +737,4 @@ p {
         margin-top: 0;
     }
 
-    #contact-main {
-        flex-direction: column;
-        margin: 0;
-        padding: 0
-    }
-
-    #intouch {
-        width: 90%;
-        text-align: center;
-    }
-
-    .wrapper {
-        margin: 10px auto;
-        width: 90%;
-    }
 }
