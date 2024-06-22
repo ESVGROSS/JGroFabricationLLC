@@ -532,7 +532,6 @@ p {
 
 #about-text {
     padding: 20px 10% 5% 10%;
-    gap: 20px;
 }
 
 #about-text p {
@@ -544,6 +543,7 @@ p {
     max-width: 375px;
     height: auto;
     border-radius: 10px;
+    margin: 20px;
 }
 
 /*#endregion*/
@@ -634,6 +634,7 @@ p {
 
 .wrapper {
     background: var(--white);
+    padding: 2rem;
     max-width: 576px;
     width: 100%;
     border-radius: .75rem;
