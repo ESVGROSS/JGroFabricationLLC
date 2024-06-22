@@ -645,7 +645,7 @@ p {
     text-align: center;
 }
 
-.wrapper img{height: 100%; width: 100%}
+.wrapper img{height: 100%; width: auto}
 
 /*#endregion*/
 /*#endregion*/
