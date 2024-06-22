@@ -638,7 +638,7 @@ p {
 .wrapper {
     background: var(--white);
     padding: 2rem;
-    max-width: 576px;
+    max-width: 550px;
     width: 100%;
     border-radius: .75rem;
     box-shadow: var(--shadow);
