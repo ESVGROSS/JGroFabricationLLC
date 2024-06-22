@@ -559,12 +559,11 @@ p {
 }
 
 #contact-main {
-    justify-content: center;
-    align-items: flex-start;
     padding: 5% 10% 5% 10%;
 }
 
 #intouch {
+    justify-content: center;
     padding: 20px;
     max-width: 800px;
     text-align: center;
