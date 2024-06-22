@@ -569,7 +569,7 @@ p {
 }
 
 #intouch {
-    padding: 20px;
+    padding-bottom: 20px;
     max-width: 800px;
     margin: 20px auto;
     text-align: center;
