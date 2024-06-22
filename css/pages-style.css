@@ -625,11 +625,27 @@ p {
 
 /*#region*/
 
-.wrapper img {
-    max-width: 576px;
+:root {
+    --yellow: #FFBD13;
+    --blue: #4383FF;
+    --blue-d-1: #3278FF;
+    --light: #F5F5F5;
+    --grey: #AAA;
+    --white: #FFF;
+    --shadow: 8px 8px 30px rgba(0, 0, 0, .05);
+}
+
+.wrapper {
+    background: var(--white);
+    padding: 2rem;
+    max-width: 400px;
     width: 100%;
     border-radius: .75rem;
+    box-shadow: var(--shadow);
+    text-align: center;
 }
+
+.wrapper img{height: 100%; width: 100%}
 
 /*#endregion*/
 /*#endregion*/
@@ -716,7 +732,7 @@ p {
         text-align: center;
     }
 
-    .wrapper img {
+    .wrapper {
         margin: 10px auto;
         width: 90%;
     }
@@ -777,7 +793,7 @@ p {
         text-align: center;
     }
 
-    .wrapper img {
+    .wrapper {
         margin: 10px auto;
         width: 90%;
     }
