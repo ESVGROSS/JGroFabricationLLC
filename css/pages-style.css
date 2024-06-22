@@ -532,6 +532,7 @@ p {
 
 #about-text {
     padding: 20px 10% 5% 10%;
+    gap: 20px;
 }
 
 #about-text p {
@@ -543,7 +544,6 @@ p {
     max-width: 375px;
     height: auto;
     border-radius: 10px;
-    margin: 20px;
 }
 
 /*#endregion*/
@@ -563,14 +563,12 @@ p {
     justify-content: center;
     align-items: flex-start;
     gap: 5%;
-    margin-top: 20px;
     padding: 5% 10% 5% 10%;
 }
 
 #intouch {
     padding-bottom: 20px;
     max-width: 800px;
-    margin: 20px auto;
     text-align: center;
 }
 
@@ -636,7 +634,6 @@ p {
 
 .wrapper {
     background: var(--white);
-    padding: 2rem;
     max-width: 576px;
     width: 100%;
     border-radius: .75rem;
