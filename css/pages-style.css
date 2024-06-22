@@ -559,11 +559,13 @@ p {
 }
 
 #contact-main {
+    display: flex;
+    flex-direction: column;
     padding: 5% 10% 5% 10%;
+    justify-content: center;
 }
 
 #intouch {
-    justify-content: center;
     padding: 20px;
     max-width: 800px;
     text-align: center;
@@ -616,6 +618,11 @@ p {
 
 #social-contact a:hover img {
     transform: scale(1.1);
+}
+
+#contact-img{
+    max-width: 900px;
+    max-height: auto;
 }
 
 /*#endregion*/
