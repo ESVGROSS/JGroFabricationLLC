@@ -559,15 +559,17 @@ p {
 }
 
 #contact-main {
-    display: flex;
-    flex-direction: column;
-    padding: 5% 10% 5% 10%;
-    justify-content: center;
+    padding: 20px 10% 5% 10%;
+}
+
+#mail {
+    max-width: 20%;
+    height: auto;
 }
 
 #intouch {
-    padding: 20px;
     max-width: 800px;
+    margin: auto;
     text-align: center;
 }
 
@@ -619,12 +621,6 @@ p {
 #social-contact a:hover img {
     transform: scale(1.1);
 }
-
-#contact-img{
-    max-width: 900px;
-    max-height: auto;
-}
-
 /*#endregion*/
 
 /* Large screens (above 1300px) */
