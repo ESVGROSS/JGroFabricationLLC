@@ -391,7 +391,7 @@ footer {
         border-radius: 10px;
         position: absolute;
         top: 80%;
-        right: -10%;
+        right: 0%;
         z-index: 10;
     }
 
