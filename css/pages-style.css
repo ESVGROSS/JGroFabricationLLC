@@ -559,17 +559,21 @@ p {
 }
 
 #contact-main {
+    height: 100%
     padding: 20px 10% 5% 10%;
 }
 
 #intouch {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto; /* Centering the section */
     text-align: center;
 }
 
-#intouch h2,
-#intouch h3 {
+#intouch h2 {
+    margin-bottom: 10px;
+}
+
+#intouch p {
     margin-bottom: 10px;
 }
 
@@ -579,14 +583,13 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    margin: 0;
+    margin: 10px;
 }
 
 #intouch li {
     display: flex;
     align-items: center;
-    gap: 10px;
+    padding: 10px;
 }
 
 #intouch li a {
@@ -602,9 +605,9 @@ p {
 #widgets-container {
     display: flex;
     justify-content: center; /* Centering the container */
-    gap: 20px; /* Space between widgets */
+    gap: 10%; /* Space between widgets */
     flex-wrap: wrap; /* Allows widgets to wrap to the next line if needed */
-    padding: 10px 0;
+    padding: 10px;
 }
 
 .widget {
