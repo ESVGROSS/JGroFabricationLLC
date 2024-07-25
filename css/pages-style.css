@@ -564,13 +564,12 @@ p {
 
 #intouch {
     max-width: 800px;
-    margin: auto;
+    margin: 0 auto; /* Centering the section */
     text-align: center;
 }
 
 #intouch h2,
 #intouch h3 {
-    text-align: center;
     margin-bottom: 10px;
 }
 
@@ -581,7 +580,7 @@ p {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding-bottom: 10px;
+    margin: 0;
 }
 
 #intouch li {
@@ -600,20 +599,21 @@ p {
     text-decoration: underline;
 }
 
-#widget-container {
+#widgets-container {
     display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    justify-content: center; /* Centering the container */
+    gap: 20px; /* Space between widgets */
+    flex-wrap: wrap; /* Allows widgets to wrap to the next line if needed */
+    padding: 10px 0;
 }
 
 .widget {
-    display: inline-block;
-    max-width: 100px;
-    gap: 10px;
+    display: flex;
+    align-items: center;
+    max-width: 150px; /* Adjust width to ensure proper spacing */
+    margin: 10px; /* Adds margin around each widget */
 }
+
 /*#endregion*/
 
 /* Large screens (above 1300px) */
