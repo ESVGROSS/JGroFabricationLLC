@@ -617,6 +617,12 @@ p {
     display: inline-block;
     max-width: 100px;
 }
+
+.homeadvisor-widget {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /*#endregion*/
 
 /* Large screens (above 1300px) */
