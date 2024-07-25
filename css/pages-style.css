@@ -605,21 +605,16 @@ p {
     text-decoration: underline;
 }
 
-#social-contact {
+#widgets-container {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
+    justify-content: space-around;
+    flex-wrap:wrap;
 }
 
-#social-contact a img {
-    width: 45px;
-    height: 45px;
-    transition: transform 0.3s;
-}
-
-#social-contact a:hover img {
-    transform: scale(1.1);
+.widget {
+    flex: 0 1 30%;
+    margin-bottom: 20px;
 }
 /*#endregion*/
 
