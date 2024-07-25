@@ -605,16 +605,17 @@ p {
     text-decoration: underline;
 }
 
-#widgets-container {
-    width: 100%;
+#widget-container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap:wrap;
+    justify-content: flex-start;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 10px;
 }
 
 .widget {
-    flex: 0 1 30%;
-    margin-bottom: 20px;
+    display: inline-block;
+    max-width: 100px;
 }
 /*#endregion*/
 
