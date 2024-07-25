@@ -562,11 +562,6 @@ p {
     padding: 20px 10% 5% 10%;
 }
 
-#mail {
-    width: 40%;
-    height: auto;
-}
-
 #intouch {
     max-width: 800px;
     margin: auto;
@@ -610,15 +605,15 @@ p {
     justify-content: flex-start;
     padding-top: 10px;
     padding-bottom: 10px;
-    gap: 10px;
 }
 
 .widget {
     display: inline-block;
     max-width: 100px;
+    gap: 10px;
 }
 
-.homeadvisor-widget {
+#homeadvisor-widget {
     display: flex;
     justify-content: center;
     align-items: center;
