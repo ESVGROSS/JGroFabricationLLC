@@ -613,7 +613,7 @@ iframe {
     flex: 1 1 50%;
     max-width: 100%; 
     border: 0;
-    align-items: center;
+    justify-content: center;
 }
 
 #widgets-container {
@@ -628,7 +628,6 @@ iframe {
 .widget {
     display: flex;
     align-items: center;
-    max-width: 150px;
 }
 
 /*#endregion*/
