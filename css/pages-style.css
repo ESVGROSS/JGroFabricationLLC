@@ -559,7 +559,7 @@ p {
 }
 
 #contact-main {
-    padding: 20px 10% 10% 10%;
+    padding: 20px 10% 5% 10%;
 }
 
 #top-section {
@@ -625,8 +625,8 @@ iframe {
 }
 
 .widget {
-    display: flex;
-    align-items: center;
+    flex: 1;
+    margin: 0 10px;
     max-width: 150px;
 }
 
