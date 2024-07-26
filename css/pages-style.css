@@ -562,9 +562,17 @@ p {
     padding: 20px 10% 10% 10%;
 }
 
+#top-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    align-items: flex-start; 
+}
+
 #intouch {
-    max-width: 1000px;
-    margin: 0 auto; /* Centering the section */
+    flex: 1 1 45%; 
+    max-width: 600px; 
+    margin: 0 auto; 
     text-align: center;
 }
 
@@ -601,19 +609,25 @@ p {
     text-decoration: underline;
 }
 
+iframe {
+    flex: 1 1 50%;
+    max-width: 100%; 
+    border: 0;
+}
+
 #widgets-container {
     display: flex;
-    justify-content: center; /* Centering the container */
-    gap: 10%; /* Space between widgets */
-    flex-wrap: wrap; /* Allows widgets to wrap to the next line if needed */
+    justify-content: center; 
+    gap: 10%; 
+    flex-wrap: wrap; 
     padding: 10px;
+    margin-top: 10%;
 }
 
 .widget {
     display: flex;
     align-items: center;
-    max-width: 150px; /* Adjust width to ensure proper spacing */
-    margin: 10px; /* Adds margin around each widget */
+    max-width: 150px;
 }
 
 /*#endregion*/
